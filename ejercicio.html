@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio Flex</title>
+
+  <style>
+    .div {
+        text-align:center;
+    }
+    header{
+        background:black;
+        color: white;
+        padding: 20px;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+     header, footer , {
+                height: 50px;
+                text-align: center;
+                background-color: rgb(31, 78, 16);
+                color: white;}
+    
+    body {
+      margin 10px ;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    
+    .container {
+      display: flex;
+      height: 1px;
+      
+    }
+
+
+    .izquierda {
+      width: 50%;
+      background: #5f71d8;
+    }
+
+    .derecha {
+      width: 50%;
+      background: #3c9c88;
+    }
+
+    
+    .centro {
+      width: 100%;
+      background: #8b5a5a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+    }
+
+    
+    .columna {
+      background: #cfe8e8;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    
+    .cuadro {
+      width: 200px;
+      height:200px;
+      background: purple;
+    }
+
+    .abajo {
+      height: 100px;
+      background: #5a4a6b;
+    }
+  </style>
+  
+</head>
+
+<body>
+    <header> <h>ejercico de creacion pagina web</h></header>
+    
+
+  <div class="container">contenedor</div>
+  
+
+
+    <div class="izquierda">izquierda</div>
+
+    <div class="centro">centro
+      <div class="columna">columna
+        <div class="cuadro">1 </div>
+        <div class="cuadro">2</div>
+      </div>
+
+      <div class="columna">columna
+        <div class="cuadro">3</div>
+        <div class="cuadro">4</div>
+      </div>
+    </div>
+
+    <div class="derecha">derecha</div>
+
+  </div>
+
+  <div class="abajo">hecho por jose luis </div>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>exercise sobre la propiedas posicion </title>
+         <meta charset="utf8">
+                <style>
+                    .caixalarga{
+                        width: 100px;
+                        height: 800px;
+                        background-color: blueviolet;
+                    }
+                    .caixa{
+                        width: 200px;
+                        height: 50px;
+                        background-color: aquamarine;
+                    }
+                    .caixafija{
+                        top: 100px;
+                        position: fixed;
+                        width: 200px;
+                        
+                    }
+                    .caixarelativa{
+                        top: 763px;
+                        position: relative;
+                        width: 100px;
+                        
+                    }
+                    .caixaabsolute{
+                         top: 450px;
+                         position: absolute;
+                         left: 450px;
+                         top: 220 px;}
+                    .rodona{
+                        position: absolute;
+                        background-color: blue;
+                        height: 20px;
+                        width: 20px;
+                        top: 20px;
+                        left: 20px;
+                        border-radius: 45%;
+                    }
+
+        </style>
+    </head>
+     <body>
+            <header>
+                   exercise sobre las propiedades de posicion  <span style="color: brown;"></span>position
+            </header>
+            <main>
+                    <p><b>absolute</b></p> la posicion del elemento es absoluta respecto al seu padre
+                    <p><b>relative</b></p> laposicion del elemento es relativa a la anterior 
+                    <p><b>fixed</b></p>la posicion del elemento se queda fijada
+
+                    <div class="caixa caixalarga"></div>
+                    <div class="caixa caixafija">fixed</div>
+                    <div class="caixa caixarelativa">relative</div>
+                    <div class="caixa caixaabsolute">absolute
+                        <div class="rodona"></div>
+                    </div>
+            </main>
+            <footer>
+
+            </footer>
+    </body>

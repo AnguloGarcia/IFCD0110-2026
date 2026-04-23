@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+         <title>flex direction</title>
+         <meta charset="utf8">
+         <style>
+            header, footer{
+                height: 40px;
+                text-align: center;
+                background-color: black;
+                color: white;
+            }
+            main{
+                height: 800px;
+                display: flex;
+                flex-direction:row;
+                margin: 20px;
+               
+            }
+            
+             .fila {
+  display: grid;
+  grid-template-columns: repeat(5, 2fr);
+  gap: 10px;
+  margin: 10px;
+}
+
+
+.box {
+  border: 5px solid rgb(17, 1, 1);
+  height: 120px;
+  display: flex;
+}
+
+.box div {
+  width: 20px;
+  height: 20px;
+  background: purple;
+  margin: 1px;
+}
+
+
+.row {
+  flex-direction: row;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.column-reverse {
+  flex-direction: column-reverse;
+}
+.contenedor {
+  display: flex;
+  flex-direction: column;
+}
+           
+
+         </style>
+    </head>
+    <body>
+        <header>example de display flex </header>
+        <main>
+<div class="contenedor">
+    <div class="fila">
+      <div class="box row">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+    
+      <div class="box row-reverse">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+    
+      <div class="box column">
+        <div></div><div></div><div></div>
+      </div>
+    
+      <div class="box column-reverse">
+        <div></div><div></div><div></div>
+      </div>
+    </div>
+    <div class="fila">
+      <div class="box no wrap">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+    
+      <div class="box wrap">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+    
+      <div class="box wrap-reverse">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+    
+      <div class="box column-reverse">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+    </div>
+     <div class="fila">
+      <div class="box flex-start">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+    
+      <div class="box flex-end">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+    
+      <div class="box center">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+    
+      <div class="box space-between">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+    </div>
+    <div class="box space around">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+    
+      <div class="box space-evenly">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+    </div>
+  <!-- <div class="caja"></div>
+  <div class="caja"></div>
+  <div class="caja"></div> -->
+</div>
+            
+          
+        
+          
+        </main>
+        <footer>
+            hecho por jose luis 
+        </footer>
+    </body>

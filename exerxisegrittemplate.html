@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ejercicio grit template </template></title>
+</head>
+<style>
+    .header{
+        background-color: aqua
+    
+        ;
+    }
+    .container {
+        height: 700px;
+        display: grid
+        grid-template-columns:1fr 5fr 1fr ;
+        grid-template-rows: 100px 300px 100px;
+        caja: 10px 
+    }
+    .caja{
+        background: lightblue;
+        border:2px solid black;
+        padding: 20px;
+        text-align: center;
+        
+    }
+    .cajasidebar{
+      align-self: start;  
+     display:flex ;
+    grid-template-columns: 25% 50% 25%;
+    width: 900px;
+    background: lightgray;
+    padding: 10px;
+
+    }
+    .cajainterna {
+        background: lightblue;
+        padding: 20 px;
+        border: 2px solid black;
+    }
+
+</style>
+<body>
+    
+    <div class="container">
+        
+        <div class="caja">menu</div>
+        <div class="cajasidebar"> sidebar
+            <div class="caja interna">menu</div>
+            <div class="caja interna">main</div>
+
+            </div>
+        <div class="caja">footer</div>
+       
+
+    </div> 
+</body>
+
+
+</html>

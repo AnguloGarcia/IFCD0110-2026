@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+
+        <title >example de us del grid </title>
+        <meta charset="utf-8"/>
+        <style>
+            header p {
+                text-align: center;
+                color: gray;
+                font-size: 18px;
+            }
+            aside {
+                padding: 20px;
+            }
+            aside ul {
+                list-style: none;
+                padding: 0;
+            }
+            aside li {
+                margin-bottom: 10px;
+            }
+            aside a {
+                text-decoration-style: none;
+                color: black;
+                font-weight: bold;
+                display: block;
+                padding: 10px;
+                background-color: white;
+                border-radius: 5px;
+            }
+            main img {
+                width: 100%;
+                max-width: 600px;
+                display: block;
+                margin: 0 auto;
+            }
+            header, footer¨{
+                text-align: center;
+                background-color: blue;
+                color: rgb(232, 240, 234);
+            }
+            .contenedor{
+                display: grid;
+                grid-template-areas: 
+                "cabecera cabecera cabecera cabecera cabecera cabecera cabecera cabecera "
+                "lateral lateral centro centro centro centro centro centro "
+                "lateral lateral centro centro centro centro centro centro "
+                "lateral lateral centro centro centro centro centro centro "
+                "lateral lateral centro centro centro centro centro centro "
+                "pie pie pie pie pie pie pie pie";
+                grid-template-columns: 1fr 1fr 1fr  1fr 1fr 1fr 1r 1fr;
+                grid-template-rows : 1fr 1fr 1fr 1fr 1fr 1fr
+            }
+            main{
+                grid-area: centro;
+                background-color: aqua;
+                
+            }
+            header{
+                grid-area: cabecera;
+                background-color: blueviolet;
+            }
+            aside{
+                grid-area: lateral;
+                background-color: aquamarine;
+            }
+            footer{
+                grid-area: pie;
+                background-color: bisque;
+            }
+        </style>
+    </head>
+    <body class="contenedor">
+        <header>
+            <h1>EXAMPLE DUS DEL DISPLAY GRID </h1>
+            <P>pagina de prueba para el display grid</P>
+        </header>
+        <main>
+           
+                <img src="https://static.vecteezy.com/system/resources/previews/045/132/933/non_2x/a-beautiful-picture-of-the-eiffel-tower-in-paris-the-capital-of-france-with-a-wonderful-background-in-wonderful-natural-colors-photo.jpg" >
+        El que va passar ahir a l’RCDE Stadium de Cornellà-el Prat no va ser un simple partit amistós entre la selecció espanyola i Egipte. Va ser una exhibició lamentable d’intolerància, de racisme i d’odi visceral, milers d’aficionats ultres espanyols que van convertir l’estadi en un escenari de vergonya col·lectiva.
+Mentre Lamine Yamal, la gran estrella catalana i musulmana de la Roja, era ovacionat per alguns quan sonava el seu nom, una part significativa de la grada cridava «Musulmà el qui no boti», un càntic islamòfob i racista que ignora deliberadament que el futbolista de Rocafonda és precisament musulmà practicant. Ahir un dels millors jugadors del món devia pensar en l’error de triar Espanya per jugar, a manca de la selecció catalana, segurament s’arrepenteix de no triar Marroc.
+
+No va ser un incident aïllat: també es van sentir consignes com «Puigdemont a presó» o «Gibraltar és espanyol», i es va xiular l’himne d’Egipte, l’equip convidat. Un comportament que ni tan sols el seleccionador Luis de la Fuente va poder defensar, qualificant-lo d’«intolerable». Els milers d’aficionats van voler convertir el partit de la selecció espanyola en un acte de nacionalisme espanyol d’extrema dreta. Aquest episodi no és nou, però sí especialment greu perquè passa a casa nostra, a Catalunya, amb un jugador que representa el talent català al màxim nivell. Lamine Yamal, que ha patit insults racistes repetidament (al Bernabéu, a les xarxes, i ara fins i tot en un partit «amistós» a Cornellà), simbolitza la paradoxa: aplaudit per ser el millor, però atacat per qui és i d’on ve. I tot davant d’un públic que suposadament hauria de celebrar el futbol i no escopir odi religiós i identitari.
+        
+         
+          </main>
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="#">INICIO </a></li>
+                    <li><a href="#">MUDANZAS </a></li>
+                    <li><a href="#">PRESUPUESTO </a></li>
+                    <LI><a href="#">CONTACTO </a></LI>
+
+                </ul>
+            </nav>
+           
+        </aside>
+    <footer>
+            desenvolupat per mi 
+    </footer>
+    </body>
+
+</html>
