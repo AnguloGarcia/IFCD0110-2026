@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+}
+.cabecera, .peu{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    position: fixed;
+}
+.menu{
+    position: fixed;
+    width: 10%;
+    height: 100%;
+    background-color: antiquewhite;
+    top: 2em;    
+}
+.peu{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.llista{
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+}
+.principal{
+    position:absolute;
+    left: 10%;
+    background-color: aqua;
+    top: 2em;
+   
+    
+}
+.cabecera{
+    top: 0;
+    z-index: 10;
+   
+    
+}
+.article{
+    border: 1px;
+    scroll-margin-top: 2EM;
+    padding: 2em;
+    font-size: 0.75rem;
+}
+.section{
+    /* scroll-margin-top: 90px; */
+}
+H2{
+    scroll-margin-top: 1EM;
+}
+span{
+    color: brown;
+    font-size: 1em;
+    font-weight: bold;
+}
