@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" href="./">
+    <link rel="stylesheet" href="./">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <meta charset="UTF-8">
+     <title>Tablero de ajedrez</title>
+
+<style>
+body {
+font-family: Arial, sans-serif;
+background: #e8df9a;
+text-align: center;
+}
+
+h1 {
+margin-top: 20px;
+}
+
+.tablero {
+width: 640px;
+height: 640px;
+margin: 30px auto;
+display: grid;
+grid-template-columns: repeat(8, 1fr);
+grid-template-rows: repeat(8, 1fr);
+border: 4px solid #333;
+}
+
+.casilla {
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 22px;
+font-weight: bold;
+}
+
+/* Selector para casillas blancas */
+.blanca {
+background-color: white;
+color: #333;
+}
+
+/* Selector para casillas negras */
+.negra {
+background-color: #444;
+color: white;
+}
+
+.jugador {
+font-size: 28px;
+font-weight: bold;
+margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="jugador">Pedro</div>
+
+<div class="tablero">
+
+<!-- Fila 1 -->
+<div class="casilla blanca">Torre</div>
+<div class="casilla negra">Caballo</div>
+<div class="casilla blanca">Alfil</div>
+<div class="casilla negra">Rey</div>
+<div class="casilla blanca">Reina</div>
+<div class="casilla negra">Alfil</div>
+<div class="casilla blanca">Caballo</div>
+<div class="casilla negra">Torre</div>
+
+<!-- Fila 2 -->
+<div class="casilla negra">Peón</div>
+<div class="casilla blanca">Peón</div>
+<div class="casilla negra">Peón</div>
+<div class="casilla blanca">Peón</div>
+<div class="casilla negra">Peón</div>
+<div class="casilla blanca">Peón</div>
+<div class="casilla negra">Peón</div>
+<div class="casilla blanca">Peón</div>
+
+<!-- Filas vacías -->
+<div class="casilla blanca"></div>
+<div class="casilla negra"></div>
+<div class="casilla blanca"></div>
+<div class="casilla negra"></div>
+<div class="casilla blanca"></div>
+<div class="casilla negra"></div>
+<div class="casilla blanca"></div>
+<div class="casilla negra"></div>
+
+<div class="casilla negra"></div>
+<div class="casilla blanca"></div>
+<div class="casilla negra"></div>
+<div class="casilla blanca"></div>
+<div class="casilla negra"></div>
+<div class="casilla blanca"></div>
+<div class="casilla negra"></div>
+<div class="casilla blanca"></div>
+
+<div class="casilla blanca"></div>
+<div class="casilla negra"></div>
+<div class="casilla blanca"></div>
+<div class="casilla negra"></div>
+<div class="casilla blanca"></div>
+<div class="casilla negra"></div>
+<div class="casilla blanca"></div>
+<div class="casilla negra"></div>
+
+<div class="casilla negra"></div>
+<div class="casilla blanca"></div>
+<div class="casilla negra"></div>
+<div class="casilla blanca"></div>
+<div class="casilla negra"></div>
+<div class="casilla blanca"></div>
+<div class="casilla negra"></div>
+<div class="casilla blanca"></div>
+
+<!-- Fila 7 -->
+<div class="casilla blanca">Peón</div>
+<div class="casilla negra">Peón</div>
+<div class="casilla blanca">Peón</div>
+<div class="casilla negra">Peón</div>
+<div class="casilla blanca">Peón</div>
+<div class="casilla negra">Peón</div>
+<div class="casilla blanca">Peón</div>
+<div class="casilla negra">Peón</div>
+
+<!-- Fila 8 -->
+<div class="casilla negra">Torre</div>
+<div class="casilla blanca">Caballo</div>
+<div class="casilla negra">Alfil</div>
+<div class="casilla blanca">Rey</div>
+<div class="casilla negra">Reina</div>
+<div class="casilla blanca">Alfil</div>
+<div class="casilla negra">Caballo</div>
+<div class="casilla blanca">Torre</div>
+
+</div>
+
+<div class="jugador">Paco</div>
+
+</body>
+</html>
