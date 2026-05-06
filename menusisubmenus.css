@@ -55,14 +55,20 @@ color: rgb(165, 72, 72);
 }
 
 .submenu {
-display: none;
+/* display: none; */
 position: absolute;
 left: 240px;
 top: 0;
+opacity: 0;
+transition: 3s ;
+overflow: hidden;
+visibility: hidden;
+
 }
 
 .menu li:hover .submenu {
 display: block;
+
 }
 
 .submenu li {
@@ -78,4 +84,22 @@ color: rgb(7, 7, 7);
 text-align: center;
 font-size: 35px;
 }
+.submenu:hover{
+   /* transform: rotate(90deg); */
+   transition-duration:3s;
+   opacity: 0,5;
+}
+img:hover{
+   transform: rotate(90deg);
+   /* transition-duration:3s; */
+   opacity: 1;
+
+}
+.menu:hover {
+    /* transition-duration:3s; */
+   opacity: 1;
+   max-height: 300px;
+   visibility: visible;
+}
+
 
