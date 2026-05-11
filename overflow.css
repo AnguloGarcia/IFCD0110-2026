@@ -1,0 +1,58 @@
+*{
+    font-size: 1rem;
+    padding: 0;
+}
+header , footer{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    align-content: center;
+    width: 100%;
+    height: 2rem;
+    position: fixed;
+    }
+    header{
+        top: 0; 
+    }
+    footer{
+        bottom: 0;
+    }
+    main{
+        background-color: darkgoldenrod;
+        top: 2rem;
+        bottom: 2rem;
+        width: 100%;
+        height: calc(100% - 4rem);
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .tarjeta{
+        background-color: aquamarine;
+        width: 200px;
+        height: 380px;border:1px solid ;
+        margin-top: 30px;
+    }
+    .titulo{
+        background-color: blueviolet;
+        text-align: center;
+
+    }
+    .contenido{
+          /* background-color: brown; */
+          font-size: .7rem;
+          height:350px
+    }
+    .vis{
+          overflow: visible;
+    }
+    .hid{
+        overflow: hidden;
+    }
+    .scr{
+        overflow: scroll;
+    }
+    .auto{
+        overflow: auto;
+    }
