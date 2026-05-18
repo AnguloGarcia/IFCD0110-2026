@@ -1,0 +1,189 @@
+/* :root{ */
+/* --color-principal-icones: rgb(216, 131, 5);
+    --color-sombras-icones: rgb(0, 0, 0);
+    --color-titulo:var(#ffffff); */
+/* } */
+* {
+  /* font-size: 1rem; */
+  /* padding: 0; */
+}
+header,
+footer {
+  background-color: black;
+  /* color: var(--color-titulo); */
+  /* text-align: center; */
+  /* align-content: center; */
+  /* width: 100%; */
+  /* height: 2rem; */
+  /* position: fixed; */
+}
+header {
+  /* grid-area: cabecera; */
+  /* top: 0;  */
+}
+footer {
+  /* grid-area: pie; */
+  /* bottom: 0; */
+}
+main {
+  /* grid-area: principal; */
+  background-color: rgb(185, 206, 192);
+  /* top: 1rem; */
+  /* bottom: 2rem; */
+  /* width: 70%; */
+  /* height: */
+  /* margin-left: 20rem; */
+  /* margin-top: 2rem;  */
+}
+nav {
+  /* grid-area: menu; */
+  background-color: antiquewhite;
+  /* margin-top: rem; */
+  /* width: 30%; */
+  /* display: flex;
+        flex-direction: row; */
+}
+ul {
+  list-style-type: none;
+  padding: 0, 5rem;
+}
+i {
+  padding: 10px;
+  /* color:var(--color-principal-icones); */
+  /* font-size: 40px; */
+  /* text-shadow:  */
+  /* 5px 5px 0 #168000; */
+  /* 6px 6px 7px rgba(2,2,2,2,5) */
+  /* :var */
+}
+li:hover {
+  background-color: blueviolet;
+  cursor: pointer;
+  /* transform: scale(1.2); */
+  /* transition: all 0.3s ease; */
+}
+li:hover > i {
+  transform: rotate(180deg);
+  transition: all 0.3s ease;
+}
+.contenedor {
+  /* grid-area: principal; */
+  /* margin-top: 2rem; */
+  /* display: flex; */
+  /* height: 54rem; */
+}
+aside {
+  /* grid-area: banners; */
+  /* width:20%; */
+  background-color: #2bd141;
+}
+.contenedor {
+  display: grid;
+  /* grid-template-columns: 1fr;   */
+  /* grid-template-areas:  
+         "cabecera"
+        "menu"
+        "principal"
+        "banners"
+        "peu"; */
+}
+@media (min-width: 695px) {
+  header {
+    grid-area: 1 / span 6;
+  }
+  nav {
+    grid-area: 2 / span 3;
+  }
+  main {
+    grid-area: 2 / span 1;
+  }
+  aside {
+    grid-area: 2 / span 1;
+  }
+  footer {
+    grid-area: 3 / span 6;
+  }
+}
+
+  @media (min-width: 1350px) {
+    header {
+      grid-area: 1 / span 6;
+    }
+    nav {
+      grid-area: 2 / span 5;
+    }
+    main {
+      grid-area: 2 / span 1;
+    }
+    aside {
+      grid-area: 3 / span3;
+    }
+    footer {
+      grid-area: 4 / span 6;
+    }
+  }
+/* @media(min-width:1000px){
+        .contenedor{
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-areas: 
+            "cabecera cabecera cabecera"
+            "menu principal banners"
+            "peu peu peu";
+} }*/
+
+main:hover {
+  background-color: #fff;
+}
+@media screen and (min-width: 400px) {
+  body {
+    background-color: rgb(104, 202, 104);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background-color: rgb(18, 18, 122);
+  }
+  body {
+    background-color: #e73232;
+  }
+}
+@media screen and (max-width: 600px) {
+  menu a {
+    float: none;
+    width: 100%;
+  }
+}
+p::before {
+  content: "llegeix aixo";
+  background-color: aquamarine;
+}
+::marker{
+    color: #e73232;
+    font-size: 50px;
+    background-color: #fff;
+}
+.boton{
+    background:#77e685 ;
+    color:#e73232 ;
+    padding:1px 5px ;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 01s;
+}
+.boton:hover{
+    background: #e73232;
+}
+.menu:hover .contenido{
+    display: block;
+}
+.contenido{
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+    float: none;
+}
+.contenido:hover{
+    display: block;
+    overflow: hidden;
+}

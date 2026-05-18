@@ -1,6 +1,6 @@
 *{
     font-size: 1rem;
-    padding: 0;
+    /* padding: 0; */
 }
 header , footer{
     background-color: black;
@@ -19,38 +19,34 @@ header , footer{
     main{
         background-color: darkgoldenrod;
         top: 2rem;
-        bottom: 2rem;
-        width: 1000px;
-        height: 200px;
-        padding:200px;
+        /* bottom: rem; */
+        width: 2000px;
+        height: 56rem;
+        padding:40px;
         position: relative ;
     }
-    asside{
+    aside{
         display: flex;
         flex-direction: column;
-        background-color: black;
-        height: 54rem;
-        width: 250px;
+        background-color: rgb(0, 0, 0);
+        height: 1000px;
+        width: 300px;
         text-align: center;
-        margin-top:2rem
+        margin-top:2rem;
+        padding: 10px;
+        
+
         
         
         }
-    div{
-        
-        width :200px;
-        height: 200px;
-        background-color:rgb(5, 5, 5);
-        background-size: cover;
-        text-align: center;
-        display: block;
-        margin: auto;
-        
-        
-    }
+    div {
+        height: 220px;
+        }
     img{
    
        border-radius: 500px;
+       z-index: 10;
+       position:relative;
         
     }
     .personales{
@@ -66,7 +62,18 @@ header , footer{
     }
     body{
         display: flex;
-        flex-direction: row;
-        gap: 10px;
-        padding: px;
+       
     }
+    .disponibilidad{
+        color: aliceblue;
+        /* background-color: black; */
+    }
+    img:hover {
+    height: 400px;
+    overflow: auto;
+    transition: height 1s;
+     }
+
+   
+   
+    

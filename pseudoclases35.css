@@ -1,0 +1,94 @@
+*{
+    font size: 2rem;
+    margin: 0;
+}
+html{
+    /* font-size: 62,5%; */
+    font-size: 1rem;
+}
+header ,footer{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    height: 2rem;
+}
+header{
+    top: 0;
+    
+}
+footer{
+    /* bottom: 0; */
+    text-align: center;
+}
+main{
+    background-color: bisque;
+    display: flex;
+    /* flex-direction:column; */
+    justify-content:space-around;
+    flex-wrap: wrap;
+    padding: 50px;
+
+}
+.tarjeta{
+    
+
+    flex-direction: column;
+    display: flex;
+    width: 300px;
+    height: 400px;
+    justify-content: space-between;
+    padding: 2px;
+    
+
+}
+.titulo{
+border-radius: 45px 45px 0 0;
+background-color:brown ;
+height: 15%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.ejemplo ,.sos,.non,.pep{
+background-color: yellow;
+height: 65%;
+}
+.descripcion{
+background-color: #414580;
+height: 20%;
+border-radius:0 0 45px 45px ;
+}
+.titulo ,.ejemplo, .descripcion{
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    border: 1px solid #000;
+}
+a:link{
+    color: chocolate;
+}
+a:visited{
+    color: aqua;
+}
+a:active{
+    color: cadetblue;
+}
+a:hover{
+    color: chartreuse;
+} 
+.sos>p:first-child{
+    background-color: violet;
+    font-size: 1.5rem;
+}
+.non>p:last-child{
+    background-color: #414580;
+    font-size:0.9rem ;
+    color: yellow;
+}
+.pep>p:nth-child(3){
+    background-color: #979ceb;}
+.pep :nth-child(2){
+    background-color: #444dd4;
+}
