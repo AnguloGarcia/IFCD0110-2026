@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patrones telefono y texto</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        background-color: #f4f4f4;
+        color: #222;
+      }
+
+      header,
+      footer {
+        background-color: #111;
+        color: white;
+        padding: 18px;
+        text-align: center;
+      }
+
+      .contenedor {
+        display: flex;
+        gap: 24px;
+        max-width: 1150px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+
+      main {
+        flex: 1;
+      }
+
+      aside {
+        width: 280px;
+      }
+
+      .banner {
+        background-color: #14532d;
+        border-radius: 8px;
+        color: white;
+        padding: 20px;
+        position: sticky;
+        top: 20px;
+      }
+
+      .banner h2 {
+        margin-top: 0;
+      }
+
+      .banner ul {
+        padding-left: 20px;
+      }
+
+      .banner li {
+        margin-bottom: 10px;
+      }
+
+      .banner code {
+        background-color: rgba(255, 255, 255, 0.16);
+        border-radius: 4px;
+        padding: 6px;
+      }
+
+      .destacado {
+        background-color: #fff7ed;
+        border: 2px solid #f97316;
+      }
+
+      section {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-bottom: 18px;
+        padding: 18px;
+      }
+
+      label,
+      small,
+      code {
+        display: block;
+        margin-top: 8px;
+      }
+
+      input {
+        box-sizing: border-box;
+        margin-top: 8px;
+        padding: 10px;
+        width: 100%;
+      }
+
+      input:valid {
+        border: 2px solid green;
+      }
+
+      input:invalid {
+        border: 2px solid crimson;
+      }
+
+      button {
+        margin-top: 12px;
+        padding: 10px 16px;
+      }
+
+      @media (max-width: 760px) {
+        .contenedor {
+          flex-direction: column;
+        }
+
+        aside {
+          width: auto;
+        }
+
+        .banner {
+          position: static;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Ejemplos de input telefono y texto con pattern</h1>
+    </header>
+
+    <div class="contenedor">
+      <main>
+        <section>
+          <h2>Telefono movil espanol</h2>
+          <form>
+            <label for="movil">Debe empezar por 6 o 7 y tener 9 numeros:</label>
+            <input
+              type="tel"
+              id="movil"
+              name="movil"
+              placeholder="612345678"
+              pattern="[67][0-9]{8}"
+              required
+            />
+            <small>Ejemplo valido: 612345678</small>
+            <code>pattern="[67][0-9]{8}"</code>
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
+
+      <section>
+        <h2>Telefono fijo espanol</h2>
+        <form>
+          <label for="fijo">Debe empezar por 8 o 9 y tener 9 numeros:</label>
+          <input
+            type="tel"
+            id="fijo"
+            name="fijo"
+            placeholder="912345678"
+            pattern="[89][0-9]{8}"
+            required
+          />
+          <small>Ejemplo valido: 912345678</small>
+          <code>pattern="[89][0-9]{8}"</code>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Telefono con prefijo internacional</h2>
+        <form>
+          <label for="internacional">Formato con +34 y 9 numeros:</label>
+          <input
+            type="tel"
+            id="internacional"
+            name="internacional"
+            placeholder="+34612345678"
+            pattern="\+34[0-9]{9}"
+            required
+          />
+          <small>Ejemplo valido: +34612345678</small>
+          <code>pattern="\+34[0-9]{9}"</code>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Telefono separado con guiones</h2>
+        <form>
+          <label for="guiones">Formato 3 numeros, guion, 3 numeros, guion, 3 numeros:</label>
+          <input
+            type="tel"
+            id="guiones"
+            name="guiones"
+            placeholder="612-345-678"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+            required
+          />
+          <small>Ejemplo valido: 612-345-678</small>
+          <code>pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"</code>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Telefono con espacios</h2>
+        <form>
+          <label for="espacios">Formato 3 grupos de 3 numeros separados por espacios:</label>
+          <input
+            type="tel"
+            id="espacios"
+            name="espacios"
+            placeholder="612 345 678"
+            pattern="[0-9]{3} [0-9]{3} [0-9]{3}"
+            required
+          />
+          <small>Ejemplo valido: 612 345 678</small>
+          <code>pattern="[0-9]{3} [0-9]{3} [0-9]{3}"</code>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Texto: nombre solo con letras</h2>
+        <form>
+          <label for="nombre">Solo letras, minimo 3 caracteres:</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Jose"
+            pattern="[A-Za-z ]{3,}"
+            required
+          />
+          <small>Ejemplo valido: Jose Luis</small>
+          <code>pattern="[A-Za-z ]{3,}"</code>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Texto: limitar letras</h2>
+        <form>
+          <label for="palabra-corta">Solo letras, entre 3 y 8 caracteres:</label>
+          <input
+            type="text"
+            id="palabra-corta"
+            name="palabra-corta"
+            placeholder="Madrid"
+            pattern="[A-Za-z]{3,8}"
+            required
+          />
+          <small>Ejemplo valido: Madrid</small>
+          <code>pattern="[A-Za-z]{3,8}"</code>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+      <section class="destacado">
+        <h2>Texto: evitar simbolos</h2>
+        <form>
+          <label for="sin-simbolos">Solo letras y numeros, sin espacios ni simbolos:</label>
+          <input
+            type="text"
+            id="sin-simbolos"
+            name="sin-simbolos"
+            placeholder="Jose2026"
+            pattern="[A-Za-z0-9]+"
+            required
+          />
+          <small>Ejemplo valido: Jose2026. No acepta @, -, _, ., ! ni espacios.</small>
+          <code>pattern="[A-Za-z0-9]+"</code>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Texto: codigo postal</h2>
+        <form>
+          <label for="codigo-postal">Debe tener exactamente 5 numeros:</label>
+          <input
+            type="text"
+            id="codigo-postal"
+            name="codigo-postal"
+            placeholder="08001"
+            pattern="[0-9]{5}"
+            required
+          />
+          <small>Ejemplo valido: 08001</small>
+          <code>pattern="[0-9]{5}"</code>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Texto: DNI</h2>
+        <form>
+          <label for="dni">Debe tener 8 numeros y una letra mayuscula:</label>
+          <input
+            type="text"
+            id="dni"
+            name="dni"
+            placeholder="12345678A"
+            pattern="[0-9]{8}[A-Z]"
+            required
+          />
+          <small>Ejemplo valido: 12345678A</small>
+          <code>pattern="[0-9]{8}[A-Z]"</code>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Texto: nombre de usuario</h2>
+        <form>
+          <label for="usuario">Letras, numeros o guion bajo, entre 4 y 12 caracteres:</label>
+          <input
+            type="text"
+            id="usuario"
+            name="usuario"
+            placeholder="jose_2026"
+            pattern="[A-Za-z0-9_]{4,12}"
+            required
+          />
+          <small>Ejemplo valido: jose_2026</small>
+          <code>pattern="[A-Za-z0-9_]{4,12}"</code>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+      </main>
+
+      <aside>
+        <div class="banner">
+          <h2>Guia rapida</h2>
+          <p>Los patrones sirven para validar lo que escribe el usuario.</p>
+          <ul>
+            <li><code>[0-9]</code> acepta un numero.</li>
+            <li><code>[A-Z]</code> acepta una letra mayuscula.</li>
+            <li><code>[A-Za-z0-9]</code> evita simbolos.</li>
+            <li><code>{5}</code> exige 5 caracteres.</li>
+            <li><code>{4,12}</code> exige entre 4 y 12 caracteres.</li>
+          </ul>
+          <p>El borde verde significa correcto y el rojo indica que falta ajustar el texto.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>Hecho por Jose Luis</footer>
+  </body>
+</html>
