@@ -1,0 +1,226 @@
+/* Estilos generales de la práctica UF1304 - Formularios */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+header,
+footer {
+    background-color: #123c69;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+.contenedor {
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+}
+
+h1,
+h2 {
+    margin-bottom: 1rem;
+}
+
+.campo {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+iframe {
+    width: 100%;
+    height: 250px;
+    border: 0;
+    border-radius: 8px;
+}
+
+button,
+.boton {
+    display: inline-block;
+    background-color: #123c69;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.3rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button:hover,
+.boton:hover {
+    background-color: #0b2948;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    main {
+        padding: 1rem;
+    }
+
+    .contenedor {
+        padding: 1rem;
+    }
+}
+/* Tarjetas de hoteles */
+
+.hotel-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #f9fbfd;
+}
+
+.hotel-card h3 {
+    color: #123c69;
+    margin-bottom: 0.5rem;
+}
+
+.hotel-card input[type="radio"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.hotel-card label {
+    display: inline;
+    font-weight: normal;
+}
+
+.volver {
+    margin-top: 1rem;
+}
+
+.volver a {
+    color: #123c69;
+    font-weight: bold;
+}
+/* Ficha del hotel */
+
+.ficha-hotel {
+    background-color: #eef4fa;
+    border-left: 5px solid #123c69;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+}
+
+legend {
+    font-weight: bold;
+    color: #123c69;
+    padding: 0 0.5rem;
+}
+
+.campo-check {
+    margin-bottom: 1rem;
+}
+
+.campo-check input {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.campo-check label {
+    display: inline;
+    font-weight: normal;
+}
+/* Formularios de acceso y registro */
+
+.bloque-formulario {
+    border: 1px solid #ddd;
+    background-color: #f9fbfd;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.bloque-formulario h3 {
+    color: #123c69;
+    margin-bottom: 1rem;
+}
+/* Resumen de la reserva */
+
+.resumen-reserva {
+    background-color: #eef4fa;
+    border-left: 5px solid #123c69;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+}
+
+.resumen-reserva h3 {
+    color: #123c69;
+    margin-bottom: 0.5rem;
+}
+/* Opinión final */
+
+.mensaje-final {
+    background-color: #eef4fa;
+    border-left: 5px solid #123c69;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+}
+
+.mensaje-final h3 {
+    color: #123c69;
+    margin-bottom: 0.5rem;
+}
+
+.valoracion {
+    margin-bottom: 0.8rem;
+}
+
+.valoracion input {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.valoracion label {
+    display: inline;
+    font-weight: normal;
+}

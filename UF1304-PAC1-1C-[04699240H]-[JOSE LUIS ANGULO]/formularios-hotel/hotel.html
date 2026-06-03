@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ficha del hotel elegido y selección de habitaciones">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de hotel - Ficha del hotel</title>
+    <link rel="stylesheet" href="../css/UF1304-PAC1-1C-[04699240H]-[Jose Luis Angulo].css">
+</head>
+<body>
+
+    <header>
+        <h1>Reserva de hotel</h1>
+        <p>Ficha del hotel seleccionado</p>
+    </header>
+
+    <main>
+        <section class="contenedor">
+            <h2>Paso 3: Elige tu habitación</h2>
+
+            <article class="ficha-hotel">
+                <h3>Hotel Mediterráneo</h3>
+                <p><strong>Identificador:</strong> H001</p>
+                <p>
+                    Hotel situado cerca de la playa, con habitaciones modernas,
+                    restaurante, piscina y servicio de recepción 24 horas.
+                </p>
+            </article>
+
+            <!-- Formulario 3: ficha del hotel y habitaciones disponibles -->
+            <form action="acceso.html" method="get">
+
+                <fieldset>
+                    <legend>Habitaciones disponibles</legend>
+
+                    <div class="campo">
+                        <label for="habitacion_doble">Habitación doble</label>
+                        <input type="number" id="habitacion_doble" name="habitacion_doble" min="0" max="5" value="0">
+                    </div>
+
+                    <div class="campo">
+                        <label for="habitacion_familiar">Habitación familiar</label>
+                        <input type="number" id="habitacion_familiar" name="habitacion_familiar" min="0" max="5" value="0">
+                    </div>
+
+                    <div class="campo">
+                        <label for="suite">Suite</label>
+                        <input type="number" id="suite" name="suite" min="0" max="3" value="0">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Opciones de la reserva</legend>
+
+                    <div class="campo-check">
+                        <input type="checkbox" id="precio_barato" name="precio_barato" value="si">
+                        <label for="precio_barato">
+                            He encontrado la misma habitación a un precio más barato
+                        </label>
+                    </div>
+
+                    <div class="campo-check">
+                        <input type="checkbox" id="desayuno" name="desayuno" value="si">
+                        <label for="desayuno">
+                            Reservar la estancia con desayuno incluido
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Peticiones especiales</legend>
+
+                    <div class="campo">
+                        <label for="hora_entrada">Hora de entrada solicitada</label>
+                        <input type="time" id="hora_entrada" name="hora_entrada">
+                    </div>
+
+                    <div class="campo">
+                        <label for="hora_salida">Hora de salida solicitada</label>
+                        <input type="time" id="hora_salida" name="hora_salida">
+                    </div>
+
+                    <div class="campo-check">
+                        <input type="checkbox" id="cama_supletoria" name="cama_supletoria" value="si">
+                        <label for="cama_supletoria">Solicitar cama supletoria</label>
+                    </div>
+
+                    <div class="campo">
+                        <label for="solicitud">Solicitud personalizada</label>
+                        <textarea id="solicitud" name="solicitud" placeholder="Escribe aquí tus peticiones especiales"></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- Campos ocultos para simular datos recibidos de los formularios anteriores -->
+                <input type="hidden" name="lugar" value="Barcelona">
+                <input type="hidden" name="entrada" value="2026-06-10">
+                <input type="hidden" name="salida" value="2026-06-15">
+                <input type="hidden" name="adultos" value="2">
+                <input type="hidden" name="ninos" value="1">
+                <input type="hidden" name="hotel" value="H001">
+
+                <button type="submit">Reservar habitación</button>
+            </form>
+
+            <p class="volver">
+                <a href="hoteles.html">Volver al listado de hoteles</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Reserva Hotelera</p>
+    </footer>
+
+</body>
+</html>

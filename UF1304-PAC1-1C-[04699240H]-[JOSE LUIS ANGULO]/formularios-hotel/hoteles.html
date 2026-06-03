@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Listado de hoteles disponibles para reservar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de hotel - Hoteles disponibles</title>
+    <link rel="stylesheet" href="../css/UF1304-PAC1-1C-[04699240H]-[Jose Luis Angulo].css">
+</head>
+<body>
+
+    <header>
+        <h1>Reserva de hotel</h1>
+        <p>Hoteles disponibles según tu búsqueda</p>
+    </header>
+
+    <main>
+        <section class="contenedor">
+            <h2>Paso 2: Elige un hotel</h2>
+
+            <!-- Formulario 2: listado de hoteles -->
+            <form action="hotel.html" method="get">
+
+                <article class="hotel-card">
+                    <h3>Hotel Mediterráneo</h3>
+                    <p><strong>Identificador:</strong> H001</p>
+                    <p>Hotel situado cerca de la playa, ideal para familias y parejas.</p>
+
+                    <input type="radio" id="hotel1" name="hotel" value="H001" required>
+                    <label for="hotel1">Elegir Hotel Mediterráneo</label>
+                </article>
+
+                <article class="hotel-card">
+                    <h3>Hotel Centro Barcelona</h3>
+                    <p><strong>Identificador:</strong> H002</p>
+                    <p>Hotel céntrico, bien comunicado y perfecto para visitas turísticas.</p>
+
+                    <input type="radio" id="hotel2" name="hotel" value="H002">
+                    <label for="hotel2">Elegir Hotel Centro Barcelona</label>
+                </article>
+
+                <article class="hotel-card">
+                    <h3>Hotel Montaña Relax</h3>
+                    <p><strong>Identificador:</strong> H003</p>
+                    <p>Alojamiento tranquilo rodeado de naturaleza y rutas de senderismo.</p>
+
+                    <input type="radio" id="hotel3" name="hotel" value="H003">
+                    <label for="hotel3">Elegir Hotel Montaña Relax</label>
+                </article>
+
+                <!-- Campos ocultos para simular que se pasa información del formulario anterior -->
+                <input type="hidden" name="lugar" value="Barcelona">
+                <input type="hidden" name="entrada" value="2026-06-10">
+                <input type="hidden" name="salida" value="2026-06-15">
+                <input type="hidden" name="adultos" value="2">
+                <input type="hidden" name="ninos" value="1">
+
+                <button type="submit">Continuar con el hotel elegido</button>
+            </form>
+
+            <p class="volver">
+                <a href="index.html">Volver a la búsqueda</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Reserva Hotelera</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Formulario de opinión sobre la experiencia en el hotel">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de hotel - Opinión</title>
+    <link rel="stylesheet" href="../css/UF1304-PAC1-1C-[04699240H]-[Jose Luis Angulo].css">
+</head>
+<body>
+
+    <header>
+        <h1>Reserva de hotel</h1>
+        <p>Cuéntanos cómo ha sido tu experiencia</p>
+    </header>
+
+    <main>
+        <section class="contenedor">
+            <h2>Paso 6: Opinión sobre la estancia</h2>
+
+            <article class="mensaje-final">
+                <h3>Reserva confirmada</h3>
+                <p>
+                    Gracias por realizar tu reserva. Una vez finalizada tu estancia,
+                    puedes completar este formulario para valorar tu experiencia en el hotel.
+                </p>
+            </article>
+
+            <!-- Formulario 6: opinión y valoración -->
+            <form action="gracias.html" method="get">
+
+                <div class="campo">
+                    <label for="tema">Tema de la opinión</label>
+                    <input 
+                        type="text" 
+                        id="tema" 
+                        name="tema" 
+                        placeholder="Ejemplo: Estancia en el Hotel Mediterráneo"
+                        required>
+                </div>
+
+                <div class="campo">
+                    <label for="opinion">Opinión escrita</label>
+                    <textarea 
+                        id="opinion" 
+                        name="opinion" 
+                        placeholder="Escribe aquí tu opinión sobre la experiencia vivida en el hotel"
+                        required></textarea>
+                </div>
+
+                <fieldset>
+                    <legend>Valoración de la experiencia</legend>
+
+                    <div class="valoracion">
+                        <input type="radio" id="rating1" name="rating" value="1" required>
+                        <label for="rating1">1 - Muy mala</label>
+                    </div>
+
+                    <div class="valoracion">
+                        <input type="radio" id="rating2" name="rating" value="2">
+                        <label for="rating2">2 - Mala</label>
+                    </div>
+
+                    <div class="valoracion">
+                        <input type="radio" id="rating3" name="rating" value="3">
+                        <label for="rating3">3 - Normal</label>
+                    </div>
+
+                    <div class="valoracion">
+                        <input type="radio" id="rating4" name="rating" value="4">
+                        <label for="rating4">4 - Buena</label>
+                    </div>
+
+                    <div class="valoracion">
+                        <input type="radio" id="rating5" name="rating" value="5">
+                        <label for="rating5">5 - Excelente</label>
+                    </div>
+                </fieldset>
+
+                <!-- Campos ocultos para simular datos anteriores -->
+                <input type="hidden" name="hotel" value="H001">
+                <input type="hidden" name="reserva" value="confirmada">
+                <input type="hidden" name="newsletter" value="si">
+
+                <button type="submit">Enviar opinión</button>
+            </form>
+
+            <p class="volver">
+                <a href="confirmacion.html">Volver a confirmación</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Reserva Hotelera</p>
+    </footer>
+
+</body>
+</html>
