@@ -98,14 +98,60 @@
       .logo {
         align-items: center;
         display: flex;
-        gap: 12px;
+        gap: 14px;
         font-weight: 900;
+        min-width: 0;
+      }
+
+      .logo-emblema {
+        display: block;
+        filter: drop-shadow(0 10px 18px rgba(11, 31, 58, 0.16));
+        flex: 0 0 auto;
+        height: 128px;
+        object-fit: contain;
+        transition: filter 0.3s ease, transform 0.3s ease;
+        width: 128px;
+      }
+
+      .logo:hover .logo-emblema {
+        filter: drop-shadow(0 14px 24px rgba(214, 181, 109, 0.38));
+        transform: scale(1.06);
+      }
+
+      .logo-camion,
+      .logo-cabina,
+      .logo-casa,
+      .logo-rueda {
+        transition: fill 0.3s ease, stroke 0.3s ease, transform 0.3s ease;
+        transform-origin: center;
+      }
+
+      .logo:hover .logo-camion {
+        fill: #f7f8fb;
+      }
+
+      .logo:hover .logo-cabina {
+        fill: #d6b56d;
+      }
+
+      .logo:hover .logo-casa {
+        transform: translateY(-2px);
+      }
+
+      .logo:hover .logo-rueda {
+        transform: translateX(2px);
+      }
+
+      .logo-nombre {
+        display: grid;
+        gap: 4px;
+        min-width: 0;
       }
 
       .logo-texto {
         color: #0b1f3a;
         display: inline-block;
-        font-size: clamp(24px, 2.6vw, 38px);
+        font-size: clamp(23px, 2.1vw, 34px);
         letter-spacing: 0;
         line-height: 1;
         overflow: hidden;
@@ -113,6 +159,15 @@
         text-shadow: 0 0 0 rgba(214, 181, 109, 0);
         transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
         white-space: nowrap;
+      }
+
+      .logo-lema {
+        color: #b9954b;
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 0;
+        line-height: 1;
+        text-transform: uppercase;
       }
 
       .logo-texto::after {
@@ -138,23 +193,6 @@
 
       .logo:hover .logo-texto::after {
         transform: skewX(-18deg) translateX(420%);
-      }
-
-      .logo-marca {
-        background: #0b1f3a;
-        border-radius: 14px;
-        color: #ffffff;
-        display: grid;
-        height: 46px;
-        place-items: center;
-        transition: transform 0.3s ease, background 0.3s ease;
-        width: 46px;
-      }
-
-      .logo:hover .logo-marca {
-        background: #d6b56d;
-        color: #0b1f3a;
-        transform: rotate(-6deg) scale(1.06);
       }
 
       .menu {
@@ -471,7 +509,7 @@
       }
 
       .grid-servicios {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, minmax(0, 1fr));
       }
 
       .servicio,
@@ -494,12 +532,92 @@
         border: 1px solid rgba(11, 31, 58, 0.1);
       }
 
+      .servicio {
+        display: grid;
+        min-height: 420px;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+      }
+
       .servicio:hover,
+      .servicio:focus,
+      .servicio:focus-within,
       .resena-mini:hover,
       .faq:hover,
       .contacto-card:hover {
         box-shadow: 0 22px 50px rgba(11, 31, 58, 0.12);
         transform: translateY(-8px);
+      }
+
+      .servicio-imagen {
+        border-radius: 0;
+        height: 100%;
+        inset: 0;
+        margin: 0;
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+      }
+
+      .servicio-imagen img {
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.45s ease, filter 0.45s ease;
+        width: 100%;
+      }
+
+      .servicio:hover .servicio-imagen img,
+      .servicio:focus .servicio-imagen img,
+      .servicio:focus-within .servicio-imagen img {
+        filter: brightness(0.45);
+        transform: scale(1.08);
+      }
+
+      .servicio-info {
+        background: rgba(255, 255, 255, 0.96);
+        border-top: 4px solid #d6b56d;
+        bottom: 0;
+        color: #0b1f3a;
+        left: 0;
+        max-height: 82%;
+        opacity: 0;
+        overflow: auto;
+        padding: 18px;
+        position: absolute;
+        right: 0;
+        transform: translateY(100%);
+        transition: opacity 0.32s ease, transform 0.42s ease;
+        z-index: 2;
+      }
+
+      .servicio h3,
+      .servicio p {
+        margin: 0;
+      }
+
+      .servicio h3 {
+        color: #0b1f3a;
+        font-size: 20px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .servicio p {
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      .servicio:hover .servicio-info,
+      .servicio:focus .servicio-info,
+      .servicio:focus-within .servicio-info {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .servicio:focus {
+        outline: 3px solid rgba(214, 181, 109, 0.7);
+        outline-offset: 4px;
       }
 
       .icono {
@@ -514,6 +632,10 @@
         justify-content: center;
         margin-bottom: 18px;
         width: 58px;
+      }
+
+      .servicio .icono {
+        display: none;
       }
 
       .proceso-grid {
@@ -918,7 +1040,16 @@
         }
 
         .logo-texto {
-          font-size: 24px;
+          font-size: 20px;
+        }
+
+        .logo-emblema {
+          height: 112px;
+          width: 112px;
+        }
+
+        .logo-lema {
+          font-size: 9px;
         }
 
         .grid-servicios,
@@ -942,6 +1073,25 @@
           grid-template-columns: 78px 1fr;
         }
       }
+
+      @media (max-width: 380px) {
+        .logo {
+          gap: 8px;
+        }
+
+        .logo-texto {
+          font-size: 17px;
+        }
+
+        .logo-emblema {
+          height: 92px;
+          width: 92px;
+        }
+
+        .logo-lema {
+          display: none;
+        }
+      }
     </style>
   </head>
   <body>
@@ -950,8 +1100,11 @@
     <header class="cabecera">
       <div class="cabecera-superior">
         <a class="logo" href="#inicio">
-          <span class="logo-marca">MV</span>
-          <span class="logo-texto">Mudanzas Vilafranca</span>
+          <img class="logo-emblema" src="../images/logomudanza.png.png" alt="Mudanzas Vilafranca" />
+          <span class="logo-nombre">
+            <span class="logo-texto">Mudanzas Vilafranca</span>
+            <span class="logo-lema">Tu hogar en buenas manos</span>
+          </span>
         </a>
         <button class="boton-menu" type="button" aria-expanded="false" aria-controls="menu-principal">
           Menu
@@ -963,7 +1116,7 @@
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#proceso">Proceso</a></li>
-          <li><a href="#resenas">Resenas</a></li>
+          <li><a href="#resenas">Reseñas</a></li>
           <li><a href="#presupuesto">Presupuesto</a></li>
           <li><a href="#contacto">Contacto</a></li>
           <li><a href="#faq">FAQ</a></li>
@@ -986,12 +1139,19 @@
           <p class="etiqueta">Mudanzas locales y nacionales</p>
           <h1>Mudanzas faciles en <span>Vilafranca</span></h1>
           <p>
-            Una pagina moderna para presentar servicios de mudanza, generar confianza
-            con resenas y recibir solicitudes de presupuesto desde cualquier dispositivo.
+            Mudanzas Vilafranca ofrece servicios de mudanzas locales y nacionales para hogares,
+            pisos, oficinas y negocios. Nuestro equipo se encarga del embalaje, desmontaje,
+            carga, transporte, descarga y montaje de muebles con trato cuidadoso y puntual.
+            Trabajamos en Vilafranca del Penedes y alrededores, preparando cada traslado segun
+            la distancia, el volumen y las necesidades del cliente. Si buscas una empresa de
+            mudanzas profesional, rapida y segura, solicita presupuesto sin compromiso.
+            Organizamos cajas, protegemos objetos delicados y planificamos cada detalle para
+            que tu cambio de vivienda o local sea comodo, claro y sin preocupaciones desde
+            el primer contacto hasta la entrega final completa.
           </p>
           <div class="acciones">
             <a class="boton" href="#presupuesto">Pedir presupuesto</a>
-            <a class="boton secundario" href="#resenas">Ver resenas</a>
+            <a class="boton secundario" href="#resenas">Ver reseñas</a>
           </div>
           <div class="mini-datos">
             <div class="mini-dato">
@@ -1000,11 +1160,11 @@
             </div>
             <div class="mini-dato">
               <strong>100%</strong>
-              <span>Diseno responsive</span>
+              <span>Muebles protegidos</span>
             </div>
             <div class="mini-dato">
               <strong>5</strong>
-              <span>Secciones clave</span>
+              <span>Servicios completos</span>
             </div>
           </div>
         </div>
@@ -1031,26 +1191,52 @@
         <div class="cabecera-seccion">
           <p class="etiqueta">Servicios</p>
           <h2>Todo lo que necesita una mudanza profesional</h2>
-          <p>Tarjetas limpias, directas y visuales, al estilo de una landing moderna.</p>
+          <p>TU HOGAR EN BUENAS MANOS</p>
         </div>
 
         <div class="grid-servicios">
-          <article class="servicio">
+          <article class="servicio" tabindex="0">
+            <figure class="servicio-imagen">
+              <img src="https://images.pexels.com/photos/3434533/pexels-photo-3434533.jpeg?cs=srgb&amp;dl=pexels-bemistermister-3434533.jpg&amp;fm=jpg" alt="Mudanza de hogar dentro de una vivienda con cajas preparadas" />
+            </figure>
             <div class="icono">01</div>
-            <h3>Mudanzas de hogar</h3>
-            <p>Transporte cuidado de muebles, cajas, electrodomesticos y objetos personales.</p>
+            <div class="servicio-info">
+              <h3>Mudanzas de hogar</h3>
+              <p>Nuestro servicio de mudanzas de hogar en Vilafranca esta pensado para trasladar pisos, casas y apartamentos con seguridad. Embalamos muebles, electrodomesticos, ropa, vajilla y objetos delicados, desmontamos piezas grandes y protegemos cada caja durante el transporte. Organizamos mudanzas locales y nacionales con planificacion, puntualidad y presupuesto claro. Si necesitas una empresa de mudanzas fiable, rapida y profesional, preparamos el traslado completo para que tu cambio de vivienda sea comodo, ordenado y sin preocupaciones desde el primer dia, en todo momento.</p>
+            </div>
           </article>
 
-          <article class="servicio">
+          <article class="servicio" tabindex="0">
+            <figure class="servicio-imagen">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Desks_and_cubicles_%28Unsplash%29.jpg" alt="Mudanza de oficina con mesas, sillas y puestos de trabajo" />
+            </figure>
             <div class="icono">02</div>
-            <h3>Oficinas y negocios</h3>
-            <p>Traslados organizados para reducir tiempos de parada y mantener el ritmo de trabajo.</p>
+            <div class="servicio-info">
+              <h3>Oficinas y negocios</h3>
+              <p>Nuestro servicio de mudanzas de oficinas en Vilafranca ayuda a empresas, despachos y comercios a cambiar de espacio con rapidez y organizacion. Trasladamos mesas, sillas, archivadores, ordenadores, impresoras, documentacion y material corporativo con embalaje seguro y etiquetado claro. Planificamos la mudanza de oficina para reducir paradas, proteger equipos y respetar horarios de trabajo. Si buscas una empresa de mudanzas profesional para negocios, preparamos un presupuesto ajustado y un traslado ordenado, puntual y eficiente de principio a fin completo siempre seguro.</p>
+            </div>
           </article>
 
-          <article class="servicio">
+          <article class="servicio" tabindex="0">
+            <figure class="servicio-imagen">
+              <img src="https://images.pexels.com/photos/7217849/pexels-photo-7217849.jpeg?cs=srgb&amp;dl=pexels-blue-bird-7217849.jpg&amp;fm=jpg" alt="Embalaje profesional de cajas para mudanzas y montaje de muebles" />
+            </figure>
             <div class="icono">03</div>
-            <h3>Embalaje y montaje</h3>
-            <p>Protecciones, cajas, etiquetado, desmontaje y montaje segun lo que necesites.</p>
+            <div class="servicio-info">
+              <h3>Embalaje y montaje</h3>
+              <p>El servicio de embalaje y montaje para mudanzas protege tus muebles y objetos antes, durante y despues del transporte. Utilizamos cajas resistentes, plastico protector, mantas, cinta, etiquetas y materiales adecuados para vajilla, cuadros, electrodomesticos y piezas delicadas. Tambien desmontamos armarios, camas, mesas y estanterias, y los montamos en el nuevo destino. Con un embalaje profesional, la mudanza es mas segura, ordenada y eficiente. Solicita presupuesto para embalaje, desmontaje, montaje y proteccion completa de tus pertenencias, siempre con cuidado profesional garantizado.</p>
+            </div>
+          </article>
+
+          <article class="servicio" tabindex="0">
+            <figure class="servicio-imagen">
+              <img src="../images/elevador.jpg" alt="Mudanza con plataforma elevadora para subir muebles por fachada" />
+            </figure>
+            <div class="icono">04</div>
+            <div class="servicio-info">
+              <h3>Mudanza con plataforma</h3>
+              <p>El servicio de mudanza con plataforma elevadora en Vilafranca facilita subir y bajar muebles grandes por fachada, balcon o ventana cuando las escaleras son estrechas o el ascensor no permite el acceso. Usamos plataforma montamuebles para sofás, armarios, electrodomesticos, cajas pesadas y piezas delicadas, reduciendo golpes, tiempos y esfuerzo. Planificamos permisos, altura, acceso y seguridad para una mudanza rapida, profesional y eficiente. Solicita presupuesto para mudanzas con elevador y transporte protegido en viviendas, oficinas y locales sin complicaciones extra siempre.</p>
+            </div>
           </article>
         </div>
       </section>
@@ -1061,8 +1247,11 @@
             <p class="etiqueta">Funcionamiento</p>
             <h2>Como funciona el servicio</h2>
             <p>
-              Una estructura clara ayuda al usuario a entender rapidamente que debe hacer
-              para contratar la mudanza.
+              Nuestro proceso de mudanzas en Vilafranca empieza con una consulta personalizada,
+              continua con presupuesto claro, embalaje seguro, planificacion del transporte y
+              entrega puntual. Coordinamos fechas, volumen, acceso, montaje y proteccion de
+              muebles para que cada mudanza local o nacional sea rapida, ordenada, profesional
+              y sin preocupaciones para hogares y negocios.
             </p>
             <a class="boton" href="#presupuesto">Empezar ahora</a>
           </div>
@@ -1071,7 +1260,7 @@
             <article class="paso">
               <div class="numero">1</div>
               <h3>Consulta</h3>
-              <p>Nos cuentas fecha, origen, destino y volumen aproximado.</p>
+              <p>En la consulta de mudanza realizamos una visita a su domicilio para tomar fotos, revisar accesos, escaleras, ascensor, volumen de muebles, objetos delicados y necesidades especiales, preparando un presupuesto de mudanzas preciso, seguro, profesional y adaptado a tu vivienda.</p>
             </article>
 
             <article class="paso">
@@ -1325,29 +1514,31 @@
           navFaq: "FAQ",
           heroTag: "Mudanzas locales y nacionales",
           heroTitle: "Mudanzas faciles en <span>Vilafranca</span>",
-          heroText: "Una pagina moderna para presentar servicios de mudanza, generar confianza con resenas y recibir solicitudes de presupuesto desde cualquier dispositivo.",
+          heroText: "Mudanzas Vilafranca ofrece servicios de mudanzas locales y nacionales para hogares, pisos, oficinas y negocios. Nuestro equipo se encarga del embalaje, desmontaje, carga, transporte, descarga y montaje de muebles con trato cuidadoso y puntual. Trabajamos en Vilafranca del Penedes y alrededores, preparando cada traslado segun la distancia, el volumen y las necesidades del cliente. Si buscas una empresa de mudanzas profesional, rapida y segura, solicita presupuesto sin compromiso. Organizamos cajas, protegemos objetos delicados y planificamos cada detalle para que tu cambio de vivienda o local sea comodo, claro y sin preocupaciones desde el primer contacto hasta la entrega final completa.",
           heroPrimary: "Pedir presupuesto",
           heroSecondary: "Ver resenas",
           mini1: "Respuesta rapida",
-          mini2: "Diseno responsive",
-          mini3: "Secciones clave",
+          mini2: "Muebles protegidos",
+          mini3: "Servicios completos",
           demoTitle: "Presupuesto en pocos pasos",
           demoText: "Origen, destino, fecha y volumen para preparar una propuesta clara.",
           serviciosTag: "Servicios",
           serviciosTitle: "Todo lo que necesita una mudanza profesional",
           serviciosText: "Tarjetas limpias, directas y visuales, al estilo de una landing moderna.",
           servicio1Title: "Mudanzas de hogar",
-          servicio1Text: "Transporte cuidado de muebles, cajas, electrodomesticos y objetos personales.",
+          servicio1Text: "Nuestro servicio de mudanzas de hogar en Vilafranca esta pensado para trasladar pisos, casas y apartamentos con seguridad. Embalamos muebles, electrodomesticos, ropa, vajilla y objetos delicados, desmontamos piezas grandes y protegemos cada caja durante el transporte. Organizamos mudanzas locales y nacionales con planificacion, puntualidad y presupuesto claro. Si necesitas una empresa de mudanzas fiable, rapida y profesional, preparamos el traslado completo para que tu cambio de vivienda sea comodo, ordenado y sin preocupaciones desde el primer dia, en todo momento.",
           servicio2Title: "Oficinas y negocios",
-          servicio2Text: "Traslados organizados para reducir tiempos de parada y mantener el ritmo de trabajo.",
+          servicio2Text: "Nuestro servicio de mudanzas de oficinas en Vilafranca ayuda a empresas, despachos y comercios a cambiar de espacio con rapidez y organizacion. Trasladamos mesas, sillas, archivadores, ordenadores, impresoras, documentacion y material corporativo con embalaje seguro y etiquetado claro. Planificamos la mudanza de oficina para reducir paradas, proteger equipos y respetar horarios de trabajo. Si buscas una empresa de mudanzas profesional para negocios, preparamos un presupuesto ajustado y un traslado ordenado, puntual y eficiente de principio a fin completo siempre seguro.",
           servicio3Title: "Embalaje y montaje",
-          servicio3Text: "Protecciones, cajas, etiquetado, desmontaje y montaje segun lo que necesites.",
+          servicio3Text: "El servicio de embalaje y montaje para mudanzas protege tus muebles y objetos antes, durante y despues del transporte. Utilizamos cajas resistentes, plastico protector, mantas, cinta, etiquetas y materiales adecuados para vajilla, cuadros, electrodomesticos y piezas delicadas. Tambien desmontamos armarios, camas, mesas y estanterias, y los montamos en el nuevo destino. Con un embalaje profesional, la mudanza es mas segura, ordenada y eficiente. Solicita presupuesto para embalaje, desmontaje, montaje y proteccion completa de tus pertenencias, siempre con cuidado profesional garantizado.",
+          servicio4Title: "Mudanza con plataforma",
+          servicio4Text: "El servicio de mudanza con plataforma elevadora en Vilafranca facilita subir y bajar muebles grandes por fachada, balcon o ventana cuando las escaleras son estrechas o el ascensor no permite el acceso. Usamos plataforma montamuebles para sofás, armarios, electrodomesticos, cajas pesadas y piezas delicadas, reduciendo golpes, tiempos y esfuerzo. Planificamos permisos, altura, acceso y seguridad para una mudanza rapida, profesional y eficiente. Solicita presupuesto para mudanzas con elevador y transporte protegido en viviendas, oficinas y locales sin complicaciones extra siempre.",
           procesoTag: "Funcionamiento",
           procesoTitle: "Como funciona el servicio",
-          procesoText: "Una estructura clara ayuda al usuario a entender rapidamente que debe hacer para contratar la mudanza.",
+          procesoText: "Nuestro proceso de mudanzas en Vilafranca empieza con una consulta personalizada, continua con presupuesto claro, embalaje seguro, planificacion del transporte y entrega puntual. Coordinamos fechas, volumen, acceso, montaje y proteccion de muebles para que cada mudanza local o nacional sea rapida, ordenada, profesional y sin preocupaciones para hogares y negocios.",
           procesoButton: "Empezar ahora",
           paso1Title: "Consulta",
-          paso1Text: "Nos cuentas fecha, origen, destino y volumen aproximado.",
+          paso1Text: "En la consulta de mudanza realizamos una visita a domicilio en Vilafranca para tomar fotos, revisar accesos, escaleras, ascensor, volumen de muebles, objetos delicados y necesidades especiales, preparando un presupuesto de mudanzas preciso, seguro, profesional y adaptado a tu vivienda.",
           paso2Title: "Presupuesto",
           paso2Text: "Preparamos una orientacion clara y sin compromiso.",
           paso3Title: "Preparacion",
@@ -1426,29 +1617,31 @@
           navFaq: "FAQ",
           heroTag: "Mudances locals i nacionals",
           heroTitle: "Mudances facils a <span>Vilafranca</span>",
-          heroText: "Una pagina moderna per presentar serveis de mudanca, generar confianca amb ressenyes i rebre sol.licituds de pressupost des de qualsevol dispositiu.",
+          heroText: "Mudanzas Vilafranca ofereix serveis de mudances locals i nacionals per a llars, pisos, oficines i negocis. El nostre equip s'encarrega de l'embalatge, desmuntatge, carrega, transport, descarrega i muntatge de mobles amb tracte curos i puntual. Treballem a Vilafranca del Penedes i voltants, preparant cada trasllat segons la distancia, el volum i les necessitats del client. Si busques una empresa de mudances professional, rapida i segura, demana pressupost sense compromis. Organitzem caixes, protegim objectes delicats i planifiquem cada detall perque el teu canvi de vivienda o local sigui comode des del primer contacte fins a entrega final amb cura i seguretat.",
           heroPrimary: "Demanar pressupost",
           heroSecondary: "Veure ressenyes",
           mini1: "Resposta rapida",
-          mini2: "Disseny responsive",
-          mini3: "Seccions clau",
+          mini2: "Mobles protegits",
+          mini3: "Serveis complets",
           demoTitle: "Pressupost en pocs passos",
           demoText: "Origen, destinacio, data i volum per preparar una proposta clara.",
           serviciosTag: "Serveis",
           serviciosTitle: "Tot el que necessita una mudanca professional",
           serviciosText: "Targetes netes, directes i visuals, amb estil de landing moderna.",
           servicio1Title: "Mudances de llar",
-          servicio1Text: "Transport cuidat de mobles, caixes, electrodomestics i objectes personals.",
+          servicio1Text: "El nostre servei de mudances de llar a Vilafranca esta pensat per traslladar pisos, cases i apartaments amb seguretat. Embalem mobles, electrodomestics, roba, vaixella i objectes delicats, desmuntem peces grans i protegim cada caixa durant el transport. Organitzem mudances locals i nacionals amb planificacio, puntualitat i pressupost clar. Si necessites una empresa de mudances fiable, rapida i professional, preparem el trasllat complet perque el canvi de vivenda sigui comode, ordenat i sense preocupacions des del primer dia, en tot moment.",
           servicio2Title: "Oficines i negocis",
-          servicio2Text: "Trasllats organitzats per reduir temps d'aturada i mantenir el ritme de feina.",
+          servicio2Text: "El servei de mudances d'oficines a Vilafranca ajuda empreses, despatxos i comerços a canviar d'espai amb rapidesa i organitzacio. Traslladem taules, cadires, arxivadors, ordinadors, impressores, documentacio i material corporatiu amb embalatge segur i etiquetatge clar. Planifiquem la mudanca d'oficina per reduir aturades, protegir equips i respectar horaris de feina. Si busques una empresa de mudances professional per a negocis, preparem un pressupost ajustat i un trasllat ordenat, puntual i eficient sempre segur per a cada client fidel amb resultat profesional.",
           servicio3Title: "Embalatge i muntatge",
-          servicio3Text: "Proteccions, caixes, etiquetatge, desmuntatge i muntatge segons el que necessitis.",
+          servicio3Text: "El servei d'embalatge i muntatge per a mudances protegeix els teus mobles i objectes abans, durant i despres del transport. Utilitzem caixes resistents, plastic protector, mantes, cinta, etiquetes i materials adequats per a vaixella, quadres, electrodomestics i peces delicades. Tambe desmuntem armaris, llits, taules i prestatgeries, i els muntem al nou desti. Amb embalatge professional, la mudanca es mes segura, ordenada i eficient. Demana pressupost per embalatge, desmuntatge, muntatge i proteccio completa amb servei de qualitat sempre professional molt segur.",
+          servicio4Title: "Mudanca amb plataforma",
+          servicio4Text: "El servei de mudanca amb plataforma elevadora a Vilafranca facilita pujar i baixar mobles grans per façana, balco o finestra quan les escales son estretes o l ascensor no permet l acces. Utilitzem plataforma muntamobles per sofas, armaris, electrodomestics, caixes pesades i peces delicades, reduint cops, temps i esforç. Planifiquem permisos, altura, acces i seguretat per a una mudanca rapida, professional i eficient. Demana pressupost per mudances amb elevador i transport protegit en llars, oficines i locals sense complicacions extra.",
           procesoTag: "Funcionament",
           procesoTitle: "Com funciona el servei",
-          procesoText: "Una estructura clara ajuda l'usuari a entendre rapidament que ha de fer per contractar la mudanca.",
+          procesoText: "El proces de mudances a Vilafranca comenca amb una consulta personalitzada, continua amb pressupost clar, embalatge segur, planificacio del transport i entrega puntual. Coordinem dates, volum, acces, muntatge i proteccio de mobles perque cada mudanca local o nacional sigui rapida, ordenada, professional i sense preocupacions per a llars i negocis.",
           procesoButton: "Comencar ara",
           paso1Title: "Consulta",
-          paso1Text: "Ens expliques data, origen, destinacio i volum aproximat.",
+          paso1Text: "A la consulta de mudanca fem una visita a domicili a Vilafranca per fer fotos, revisar accessos, escales, ascensor, volum de mobles, objectes delicats i necessitats especials, preparant un pressupost de mudances precis, segur, professional i adaptat a la vivienda.",
           paso2Title: "Pressupost",
           paso2Text: "Preparem una orientacio clara i sense compromis.",
           paso3Title: "Preparacio",
@@ -1527,29 +1720,31 @@
           navFaq: "FAQ",
           heroTag: "Local and national moves",
           heroTitle: "Easy moving in <span>Vilafranca</span>",
-          heroText: "A modern page to present moving services, build trust with reviews and receive quote requests from any device.",
+          heroText: "Mudanzas Vilafranca provides local and national moving services for homes, apartments, offices and businesses. Our team handles packing, disassembly, loading, transport, unloading and furniture assembly with careful and punctual service. We work in Vilafranca del Penedes and nearby areas, planning every move according to distance, volume and each customer need. If you are looking for a professional, fast and secure moving company, request a free quote with no obligation. We organize boxes, protect fragile items and manage every detail so your home or business relocation feels clear, comfortable and stress free from first contact to final delivery, complete and safe.",
           heroPrimary: "Request a quote",
           heroSecondary: "See reviews",
           mini1: "Fast reply",
-          mini2: "Responsive design",
-          mini3: "Key sections",
+          mini2: "Protected furniture",
+          mini3: "Complete services",
           demoTitle: "Quote in a few steps",
           demoText: "Origin, destination, date and volume to prepare a clear proposal.",
           serviciosTag: "Services",
           serviciosTitle: "Everything a professional move needs",
           serviciosText: "Clean, direct and visual cards with a modern landing page style.",
           servicio1Title: "Home moving",
-          servicio1Text: "Careful transport of furniture, boxes, appliances and personal items.",
+          servicio1Text: "Our home moving service in Vilafranca is designed to relocate flats, houses and apartments safely. We pack furniture, appliances, clothes, dishes and fragile items, disassemble large pieces and protect every box during transport. We organize local and national moves with planning, punctuality and a clear quote. If you need a reliable, fast and professional moving company, we prepare the complete relocation so your change of home is comfortable, organized and free from worries from the very first day, every step.",
           servicio2Title: "Offices and businesses",
-          servicio2Text: "Organized moves to reduce downtime and keep work flowing.",
+          servicio2Text: "Our office moving service in Vilafranca helps companies, studios and shops relocate quickly and with clear organization. We move desks, chairs, filing cabinets, computers, printers, documents and business equipment with secure packing and careful labeling. We plan each office relocation to reduce downtime, protect devices and respect working hours. If you need a professional moving company for businesses, we prepare a tailored quote and an organized, punctual and efficient move from start to finish with safe handling every time safely.",
           servicio3Title: "Packing and assembly",
-          servicio3Text: "Protection, boxes, labeling, disassembly and assembly according to your needs.",
+          servicio3Text: "Our packing and assembly service for moves protects your furniture and belongings before, during and after transport. We use strong boxes, protective wrap, blankets, tape, labels and suitable materials for dishes, pictures, appliances and fragile pieces. We also disassemble wardrobes, beds, tables and shelving, then assemble them at the new destination. With professional packing, your move is safer, tidier and more efficient. Request a quote for packing, disassembly, assembly and complete protection of your belongings with careful service always safely.",
+          servicio4Title: "Moving with lift platform",
+          servicio4Text: "Our moving lift platform service in Vilafranca helps raise and lower large furniture through the facade, balcony or window when stairs are narrow or the elevator cannot be used. We use a furniture lift for sofas, wardrobes, appliances, heavy boxes and delicate pieces, reducing knocks, time and effort. We plan permits, height, access and safety for a fast, professional and efficient move. Request a quote for moving with lift platform and protected transport for homes, offices and premises without stress.",
           procesoTag: "How it works",
           procesoTitle: "How the service works",
-          procesoText: "A clear structure helps users quickly understand what they need to do to book the move.",
+          procesoText: "Our moving process in Vilafranca starts with a personalized consultation, then a clear quote, secure packing, transport planning and punctual delivery. We coordinate dates, volume, access, assembly and furniture protection so every local or national move is fast, organized, professional and worry free for homes, offices and businesses today safely.",
           procesoButton: "Start now",
           paso1Title: "Request",
-          paso1Text: "Tell us the date, origin, destination and approximate volume.",
+          paso1Text: "During the moving consultation, we visit your home in Vilafranca to take photos, check access, stairs, elevator, furniture volume, fragile items and special needs, preparing a precise, safe, professional moving quote adapted to your property and relocation plan today complete.",
           paso2Title: "Quote",
           paso2Text: "We prepare a clear estimate with no obligation.",
           paso3Title: "Preparation",
@@ -1678,6 +1873,8 @@
         setText("#servicios .servicio:nth-child(2) p", t.servicio2Text);
         setText("#servicios .servicio:nth-child(3) h3", t.servicio3Title);
         setText("#servicios .servicio:nth-child(3) p", t.servicio3Text);
+        setText("#servicios .servicio:nth-child(4) h3", t.servicio4Title);
+        setText("#servicios .servicio:nth-child(4) p", t.servicio4Text);
 
         setText("#proceso .etiqueta", t.procesoTag);
         setText("#proceso .panel-proceso h2", t.procesoTitle);
