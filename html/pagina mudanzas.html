@@ -80,13 +80,34 @@
         border-bottom: 1px solid rgba(11, 31, 58, 0.1);
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 10px;
+        isolation: isolate;
         left: 0;
-        padding: 18px 6%;
+        overflow: hidden;
+        padding: 10px 6% 14px;
         position: sticky;
         right: 0;
         top: 0;
         z-index: 20;
+      }
+
+      .cabecera::before,
+      .cabecera::after {
+        content: "";
+        inset: 0;
+        pointer-events: none;
+        position: absolute;
+        z-index: 0;
+      }
+
+      .cabecera::before {
+        background: url("../images/cabecera mudanza.png")  center 68% / 100% auto no-repeat;
+        opacity: 0.9;
+      }
+
+      .cabecera::after {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.72) 48%, rgba(255, 255, 255, 0.88));
+        opacity: 0.5;
       }
 
       .cabecera-superior {
@@ -94,14 +115,19 @@
         display: flex;
         gap: 14px;
         justify-content: space-between;
+        position: relative;
+        z-index: 1;
       }
 
       .cabecera-inferior {
+        align-items: center;
         display: flex;
         flex-direction: column;
         gap: 14px;
         width: 100%;
         padding: 0 6%;
+        position: relative;
+        z-index: 1;
       }
 
       .idioma-control {
@@ -110,14 +136,16 @@
         border: 1px solid rgba(11, 31, 58, 0.12);
         border-radius: 999px;
         display: flex;
+        flex: 0 0 auto;
         gap: 8px;
+        margin-left: auto;
         padding: 7px 10px;
       }
 
       .logo {
         align-items: center;
         display: flex;
-        gap: 14px;
+        gap: 24px;
         font-weight: 900;
         min-width: 0;
       }
@@ -126,14 +154,14 @@
         display: block;
         filter: drop-shadow(0 10px 18px rgba(11, 31, 58, 0.16));
         flex: 0 0 auto;
-        height: 128px;
+        height: 220px;
         object-fit: contain;
         transition: filter 0.3s ease, transform 0.3s ease;
-        width: 128px;
+        width: 220px;
       }
 
       .logo:hover .logo-emblema {
-        filter: drop-shadow(0 14px 24px rgba(214, 181, 109, 0.38));
+        filter: drop-shadow(0 10px 18px rgba(11, 31, 58, 0.16));
         transform: scale(1.06);
       }
 
@@ -146,31 +174,31 @@
       }
 
       .logo:hover .logo-camion {
-        fill: #f7f8fb;
+        fill: inherit;
       }
 
       .logo:hover .logo-cabina {
-        fill: #d6b56d;
+        fill: inherit;
       }
 
       .logo:hover .logo-casa {
-        transform: translateY(-2px);
+        transform: none;
       }
 
       .logo:hover .logo-rueda {
-        transform: translateX(2px);
+        transform: none;
       }
 
       .logo-nombre {
         display: grid;
-        gap: 4px;
+        gap: 8px;
         min-width: 0;
       }
 
       .logo-texto {
         color: #0b1f3a;
         display: inline-block;
-        font-size: clamp(23px, 2.1vw, 34px);
+        font-size: clamp(42px, 4vw, 66px);
         letter-spacing: 0;
         line-height: 1;
         overflow: hidden;
@@ -182,7 +210,7 @@
 
       .logo-lema {
         color: #b9954b;
-        font-size: 11px;
+        font-size: 20px;
         font-weight: 900;
         letter-spacing: 0;
         line-height: 1;
@@ -202,11 +230,8 @@
       }
 
       .logo:hover .logo-texto {
-        color: #b9954b;
-        text-shadow:
-          0 0 8px rgba(214, 181, 109, 0.75),
-          0 0 22px rgba(214, 181, 109, 0.6),
-          0 0 42px rgba(214, 181, 109, 0.38);
+        color: #0b1f3a;
+        text-shadow: 0 0 0 rgba(214, 181, 109, 0);
         transform: scale(1.06);
       }
 
@@ -259,7 +284,9 @@
         border: 1px solid rgba(11, 31, 58, 0.12);
         border-radius: 999px;
         display: flex;
+        flex: 0 0 auto;
         gap: 8px;
+        margin-left: auto;
         padding: 7px 10px;
       }
 
@@ -311,6 +338,16 @@
       .boton.secundario:hover {
         background: #f7efd9;
         box-shadow: 0 18px 38px rgba(11, 31, 58, 0.12);
+      }
+
+      .boton.verde {
+        background: #25d366;
+        color: #082414;
+      }
+
+      .boton.verde:hover {
+        background: #1fb95a;
+        box-shadow: 0 18px 38px rgba(37, 211, 102, 0.28);
       }
 
       .hero {
@@ -417,6 +454,7 @@
         background: #ffffff;
         border: 1px solid rgba(11, 31, 58, 0.1);
         border-radius: 18px;
+        flex: 1 1 130px;
         padding: 16px 18px;
       }
 
@@ -490,6 +528,18 @@
         padding: 90px 6%;
       }
 
+      #servicios {
+        scroll-margin-top: 250px;
+      }
+
+      #proceso {
+        scroll-margin-top: 325px;
+      }
+
+      #reseñas {
+        scroll-margin-top: 250px;
+      }
+
       .seccion.clara {
         background: #ffffff;
       }
@@ -521,7 +571,7 @@
       .grid-servicios,
       .grid-pasos,
       .grid-contacto,
-      .tarjetas-resenas,
+      .tarjetas-reseñas,
       .grid-faq {
         display: grid;
         gap: 18px;
@@ -534,7 +584,7 @@
       .servicio,
       .paso,
       .contacto-card,
-      .resena-mini,
+      .reseña-mini,
       .faq,
       .formulario {
         border-radius: 24px;
@@ -544,7 +594,7 @@
 
       .servicio,
       .contacto-card,
-      .resena-mini,
+      .reseña-mini,
       .faq,
       .formulario {
         background: #ffffff;
@@ -562,7 +612,7 @@
       .servicio:hover,
       .servicio:focus,
       .servicio:focus-within,
-      .resena-mini:hover,
+      .reseña-mini:hover,
       .faq:hover,
       .contacto-card:hover {
         box-shadow: 0 22px 50px rgba(11, 31, 58, 0.12);
@@ -610,6 +660,18 @@
         z-index: 2;
       }
 
+      .servicio .icono {
+        background: rgba(255, 255, 255, 0.94);
+        border: 1px solid rgba(214, 181, 109, 0.55);
+        box-shadow: 0 12px 28px rgba(11, 31, 58, 0.18);
+        display: flex;
+        left: 18px;
+        margin: 0;
+        position: absolute;
+        top: 18px;
+        z-index: 2;
+      }
+
       .servicio h3,
       .servicio p {
         margin: 0;
@@ -653,8 +715,13 @@
         width: 58px;
       }
 
-      .servicio .icono {
-        display: none;
+      .icono svg {
+        height: 30px;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2.2;
+        width: 30px;
       }
 
       .proceso-grid {
@@ -686,7 +753,7 @@
         line-height: 1;
       }
 
-      .widget-automatico-resenas {
+      .widget-automatico-reseñas {
         background: #ffffff;
         border: 2px dashed rgba(214, 181, 109, 0.55);
         border-radius: 24px;
@@ -783,7 +850,7 @@
         height: 100%;
       }
 
-      .tarjetas-resenas {
+      .tarjetas-reseñas {
         grid-template-columns: repeat(3, 1fr);
       }
 
@@ -1029,7 +1096,7 @@
 
         .grid-servicios,
         .grid-contacto,
-        .tarjetas-resenas,
+        .tarjetas-reseñas,
         .grid-faq {
           grid-template-columns: 1fr 1fr;
         }
@@ -1039,14 +1106,29 @@
         .cabecera {
           align-items: stretch;
           flex-direction: column;
+          min-height: 190px;
+          overflow: hidden;
           padding: 14px 20px;
         }
 
         .cabecera-superior {
+          justify-content: flex-start;
+          min-height: 82px;
+          position: static;
           width: 100%;
         }
 
+        .cabecera-inferior {
+          align-items: flex-start;
+          padding: 0;
+          position: relative;
+          z-index: 1;
+        }
+
         .boton-menu {
+          align-self: flex-start;
+          background: #d6b56d;
+          color: #0b1f3a;
           display: inline-block;
         }
 
@@ -1065,6 +1147,7 @@
           border-radius: 24px;
           flex-direction: column;
           margin-top: 14px;
+          text-align: center;
         }
 
         .menu a {
@@ -1072,15 +1155,28 @@
         }
 
         .idioma-control {
-          justify-content: space-between;
-          margin-top: 14px;
-          width: 100%;
+          justify-content: flex-start;
+          margin-left: 0;
+          position: relative;
+          z-index: 2;
         }
 
         .hero,
         .seccion {
           padding-left: 20px;
           padding-right: 20px;
+        }
+
+        #servicios {
+          scroll-margin-top: 300px;
+        }
+
+        #proceso {
+          scroll-margin-top: 550px;
+        }
+
+        #reseñas {
+          scroll-margin-top: 230px;
         }
 
         .hero {
@@ -1096,23 +1192,41 @@
           width: 100%;
         }
 
-        .logo-texto {
-          font-size: 20px;
+        .logo {
+          height: 100%;
+          inset: 0;
+          justify-content: center;
+          pointer-events: none;
+          position: absolute;
+          width: 100%;
+          z-index: 0;
         }
 
         .logo-emblema {
-          height: 112px;
-          width: 112px;
+          filter: none;
+          height: 100%;
+          object-fit: contain;
+          object-position: center center;
+          width: 100%;
         }
 
-        .logo-lema {
-          font-size: 9px;
+        .logo:hover .logo-emblema {
+          filter: none;
+          transform: none;
+        }
+
+        .logo-nombre {
+          display: none;
+        }
+
+        .idioma-label {
+          display: none;
         }
 
         .grid-servicios,
         .grid-pasos,
         .grid-contacto,
-        .tarjetas-resenas,
+        .tarjetas-reseñas,
         .grid-faq {
           grid-template-columns: 1fr;
         }
@@ -1136,17 +1250,9 @@
           gap: 8px;
         }
 
-        .logo-texto {
-          font-size: 17px;
-        }
-
         .logo-emblema {
-          height: 92px;
-          width: 92px;
-        }
-
-        .logo-lema {
-          display: none;
+          height: 100%;
+          width: 100%;
         }
       }
     </style>
@@ -1163,12 +1269,6 @@
             <span class="logo-lema">Tu hogar en buenas manos</span>
           </span>
         </a>
-        <button class="boton-menu" type="button" aria-expanded="false" aria-controls="menu-principal">
-          Menu
-        </button>
-      </div>
-
-      <div class="cabecera-inferior">
         <div class="idioma-control">
           <label class="idioma-label" for="selector-idioma">Idioma</label>
           <select class="idioma-select" id="selector-idioma" aria-label="Seleccionar idioma">
@@ -1177,7 +1277,12 @@
             <option value="en">EN</option>
           </select>
         </div>
+      </div>
 
+      <div class="cabecera-inferior">
+        <button class="boton-menu" type="button" aria-expanded="false" aria-controls="menu-principal">
+          Menu
+        </button>
         <nav id="menu-principal">
           <ul class="menu">
             <li><a href="#inicio">Inicio</a></li>
@@ -1209,7 +1314,7 @@
             el primer contacto hasta la entrega final completa.
           </p>
           <div class="acciones">
-            <a class="boton" href="#presupuesto">Pedir presupuesto</a>
+            <a class="boton verde" href="#presupuesto">Pide presupuesto</a>
             <a class="boton secundario" href="#reseñas">Ver reseñas</a>
           </div>
           <div class="mini-datos">
@@ -1224,6 +1329,10 @@
             <div class="mini-dato">
               <strong>5</strong>
               <span>Servicios completos</span>
+            </div>
+            <div class="mini-dato">
+              <strong>0 EUR</strong>
+              <span>Presupuesto sin compromiso</span>
             </div>
           </div>
         </div>
@@ -1258,7 +1367,13 @@
             <figure class="servicio-imagen">
               <img src="https://images.pexels.com/photos/3434533/pexels-photo-3434533.jpeg?cs=srgb&amp;dl=pexels-bemistermister-3434533.jpg&amp;fm=jpg" alt="Mudanza de hogar dentro de una vivienda con cajas preparadas" />
             </figure>
-            <div class="icono">01</div>
+            <div class="icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M3 11.5 12 4l9 7.5" />
+                <path d="M5 10.5V20h14v-9.5" />
+                <path d="M9 20v-6h6v6" />
+              </svg>
+            </div>
             <div class="servicio-info">
               <h3>Mudanzas de hogar</h3>
               <p>Nuestro servicio de mudanzas de hogar en Vilafranca esta pensado para trasladar pisos, casas y apartamentos con seguridad. Embalamos muebles, electrodomesticos, ropa, vajilla y objetos delicados, desmontamos piezas grandes y protegemos cada caja durante el transporte. Organizamos mudanzas locales y nacionales con planificacion, puntualidad y presupuesto claro. Si necesitas una empresa de mudanzas fiable, rapida y profesional, preparamos el traslado completo para que tu cambio de vivienda sea comodo, ordenado y sin preocupaciones desde el primer dia, en todo momento.</p>
@@ -1269,7 +1384,16 @@
             <figure class="servicio-imagen">
               <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Desks_and_cubicles_%28Unsplash%29.jpg" alt="Mudanza de oficina con mesas, sillas y puestos de trabajo" />
             </figure>
-            <div class="icono">02</div>
+            <div class="icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 21V7h16v14" />
+                <path d="M8 7V4h8v3" />
+                <path d="M8 11h2" />
+                <path d="M14 11h2" />
+                <path d="M8 15h2" />
+                <path d="M14 15h2" />
+              </svg>
+            </div>
             <div class="servicio-info">
               <h3>Oficinas y negocios</h3>
               <p>Nuestro servicio de mudanzas de oficinas en Vilafranca ayuda a empresas, despachos y comercios a cambiar de espacio con rapidez y organizacion. Trasladamos mesas, sillas, archivadores, ordenadores, impresoras, documentacion y material corporativo con embalaje seguro y etiquetado claro. Planificamos la mudanza de oficina para reducir paradas, proteger equipos y respetar horarios de trabajo. Si buscas una empresa de mudanzas profesional para negocios, preparamos un presupuesto ajustado y un traslado ordenado, puntual y eficiente de principio a fin completo siempre seguro.</p>
@@ -1280,7 +1404,14 @@
             <figure class="servicio-imagen">
               <img src="https://images.pexels.com/photos/7217849/pexels-photo-7217849.jpeg?cs=srgb&amp;dl=pexels-blue-bird-7217849.jpg&amp;fm=jpg" alt="Embalaje profesional de cajas para mudanzas y montaje de muebles" />
             </figure>
-            <div class="icono">03</div>
+            <div class="icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5v-9Z" />
+                <path d="M12 12 4.5 7.8" />
+                <path d="M12 12l7.5-4.2" />
+                <path d="M12 12v8.5" />
+              </svg>
+            </div>
             <div class="servicio-info">
               <h3>Embalaje y montaje</h3>
               <p>El servicio de embalaje y montaje para mudanzas protege tus muebles y objetos antes, durante y despues del transporte. Utilizamos cajas resistentes, plastico protector, mantas, cinta, etiquetas y materiales adecuados para vajilla, cuadros, electrodomesticos y piezas delicadas. Tambien desmontamos armarios, camas, mesas y estanterias, y los montamos en el nuevo destino. Con un embalaje profesional, la mudanza es mas segura, ordenada y eficiente. Solicita presupuesto para embalaje, desmontaje, montaje y proteccion completa de tus pertenencias, siempre con cuidado profesional garantizado.</p>
@@ -1291,7 +1422,14 @@
             <figure class="servicio-imagen">
               <img src="../images/elevador.jpg" alt="Mudanza con plataforma elevadora para subir muebles por fachada" />
             </figure>
-            <div class="icono">04</div>
+            <div class="icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 18h16" />
+                <path d="M7 18V8l5-4 5 4v10" />
+                <path d="M9.5 11h5" />
+                <path d="M12 6v12" />
+              </svg>
+            </div>
             <div class="servicio-info">
               <h3>Mudanza con plataforma</h3>
               <p>El servicio de mudanza con plataforma elevadora en Vilafranca facilita subir y bajar muebles grandes por fachada, balcon o ventana cuando las escaleras son estrechas o el ascensor no permite el acceso. Usamos plataforma montamuebles para sofás, armarios, electrodomesticos, cajas pesadas y piezas delicadas, reduciendo golpes, tiempos y esfuerzo. Planificamos permisos, altura, acceso y seguridad para una mudanza rapida, profesional y eficiente. Solicita presupuesto para mudanzas con elevador y transporte protegido en viviendas, oficinas y locales sin complicaciones extra siempre.</p>
@@ -1343,14 +1481,17 @@
         </div>
       </section>
 
-      <section class="seccion clara" id="resenas">
+      <section class="seccion clara" id="reseñas">
         <div class="cabecera-seccion">
-          <p class="etiqueta">Resenas</p>
+          <p class="etiqueta">Reseñas</p>
           <h2>Un bloque preparado para mostrar opiniones reales</h2>
           <p>Incluye hueco para widget automatico y tarjetas manuales de respaldo.</p>
         </div>
 
-        <div class="widget-automatico-resenas">
+        <div class="widget-automatico-reseñas">
+          <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-cc236d3f-97d4-4181-8070-f1910837b43b" data-elfsight-app-lazy></div>
           <!--
             PEGA AQUI EL CODIGO DEL WIDGET AUTOMATICO.
             Ejemplos: codigo de Elfsight, Tagembed o SociableKIT.
@@ -1360,68 +1501,11 @@
             <div class="..."></div>
             <iframe src="..."></iframe>
           -->
-          <p class="widget-aviso">
-            Aqui se mostrara el widget automatico de resenas cuando pegues el codigo de la plataforma.
-          </p>
+          <!-- <p class="widget-aviso">
+            Aqui se mostrara el widget automatico de reseñas cuando pegues el codigo de la plataforma.
+          </p> -->
         </div>
 
-        <div class="widget-google">
-          <div class="widget-cabecera">
-            <div class="google-marca">
-              <span class="google-letra">G</span>
-              <div>
-                <h3>Google Reviews</h3>
-                <p>Resenas visibles en esta pagina</p>
-              </div>
-            </div>
-            <span class="enlace-texto">Contenido editable</span>
-          </div>
-
-          <div class="resumen-google">
-            <div>
-              <div class="nota-google">5 estrellas</div>
-              <p>Mas notas y comentarios actualizados en Google</p>
-            </div>
-            <div class="barras-notas">
-              <div class="fila-nota">
-                <span>5 estrellas</span>
-                <div class="barra"><span style="width: 100%"></span></div>
-              </div>
-              <div class="fila-nota">
-                <span>4 estrellas</span>
-                <div class="barra"><span style="width: 72%"></span></div>
-              </div>
-              <div class="fila-nota">
-                <span>3 estrellas</span>
-                <div class="barra"><span style="width: 38%"></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tarjetas-resenas">
-            <article class="resena-mini">
-              <div class="estrellas">*****</div>
-              <strong>Resena real 1</strong>
-              <p>"Pega aqui el texto exacto de la primera resena de Google."</p>
-            </article>
-
-            <article class="resena-mini">
-              <div class="estrellas">*****</div>
-              <strong>Resena real 2</strong>
-              <p>"Pega aqui el texto exacto de la segunda resena de Google."</p>
-            </article>
-
-            <article class="resena-mini">
-              <div class="estrellas">*****</div>
-              <strong>Resena real 3</strong>
-              <p>"Pega aqui el texto exacto de la tercera resena de Google."</p>
-            </article>
-          </div>
-
-          <p class="nota-legal">
-            Sustituye estos textos por las resenas reales copiadas desde Google si quieres mostrar comentarios exactos de clientes.
-          </p>
-        </div>
       </section>
 
       <section class="seccion" id="presupuesto">
@@ -1578,6 +1662,7 @@
       const selectorIdioma = document.querySelector("#selector-idioma");
       const cursorFuego = document.querySelector(".cursor-fuego");
       const permiteMovimiento = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const widgetReseñas = document.querySelector(".widget-automatico-reseñas");
 
       const textos = {
         es: {
@@ -1587,18 +1672,19 @@
           navInicio: "Inicio",
           navServicios: "Servicios",
           navProceso: "Proceso",
-          navResenas: "Resenas",
+          navReseñas: "Reseñas",
           navPresupuesto: "Presupuesto",
           navContacto: "Contacto",
           navFaq: "FAQ",
           heroTag: "Mudanzas locales y nacionales",
           heroTitle: "Mudanzas faciles en <span>Vilafranca</span>",
           heroText: "Mudanzas Vilafranca ofrece servicios de mudanzas locales y nacionales para hogares, pisos, oficinas y negocios. Nuestro equipo se encarga del embalaje, desmontaje, carga, transporte, descarga y montaje de muebles con trato cuidadoso y puntual. Trabajamos en Vilafranca del Penedes y alrededores, preparando cada traslado segun la distancia, el volumen y las necesidades del cliente. Si buscas una empresa de mudanzas profesional, rapida y segura, solicita presupuesto sin compromiso. Organizamos cajas, protegemos objetos delicados y planificamos cada detalle para que tu cambio de vivienda o local sea comodo, claro y sin preocupaciones desde el primer contacto hasta la entrega final completa.",
-          heroPrimary: "Pedir presupuesto",
-          heroSecondary: "Ver resenas",
+          heroPrimary: "Pide presupuesto",
+          heroSecondary: "Ver reseñas",
           mini1: "Respuesta rapida",
           mini2: "Muebles protegidos",
           mini3: "Servicios completos",
+          mini4: "Presupuesto sin compromiso",
           demoTitle: "Presupuesto en pocos pasos",
           demoText: "Origen, destino, fecha y volumen para preparar una propuesta clara.",
           serviciosTag: "Servicios",
@@ -1624,21 +1710,21 @@
           paso3Text: "Organizamos cajas, protecciones y tiempos de recogida.",
           paso4Title: "Entrega",
           paso4Text: "Transportamos, descargamos y colocamos segun lo acordado.",
-          resenasTag: "Resenas",
-          resenasTitle: "Un bloque preparado para mostrar opiniones reales",
-          resenasText: "Incluye hueco para widget automatico y tarjetas manuales de respaldo.",
-          widgetAviso: "Aqui se mostrara el widget automatico de resenas cuando pegues el codigo de la plataforma.",
-          googleSubtitle: "Resenas visibles en esta pagina",
+          reseñasTag: "Reseñas",
+          reseñasTitle: "Clientes que confian en Mudanzas Vilafranca",
+          reseñasText: "Opiniones destacadas para mostrar confianza desde el primer vistazo.",
+          widgetAviso: "Aqui se mostrara el widget automatico de reseñas cuando pegues el codigo de la plataforma.",
+          googleSubtitle: "Reseñas visibles en esta pagina",
           editable: "Contenido editable",
           notaGoogle: "5 estrellas",
           notaGoogleText: "Mas notas y comentarios actualizados en Google",
-          resena1Title: "Resena real 1",
-          resena1Text: "\"Pega aqui el texto exacto de la primera resena de Google.\"",
-          resena2Title: "Resena real 2",
-          resena2Text: "\"Pega aqui el texto exacto de la segunda resena de Google.\"",
-          resena3Title: "Resena real 3",
-          resena3Text: "\"Pega aqui el texto exacto de la tercera resena de Google.\"",
-          notaLegal: "Sustituye estos textos por las resenas reales copiadas desde Google si quieres mostrar comentarios exactos de clientes.",
+          reseña1Title: "Reseña real 1",
+          reseña1Text: "\"Pega aqui el texto exacto de la primera reseña de Google.\"",
+          reseña2Title: "Reseña real 2",
+          reseña2Text: "\"Pega aqui el texto exacto de la segunda reseña de Google.\"",
+          reseña3Title: "Reseña real 3",
+          reseña3Text: "\"Pega aqui el texto exacto de la tercera reseña de Google.\"",
+          notaLegal: "Sustituye estos textos por las reseñas reales copiadas desde Google si quieres mostrar comentarios exactos de clientes.",
           presupuestoTag: "Presupuesto online",
           presupuestoTitle: "Recibe solicitudes desde la web",
           presupuestoText: "El formulario queda visible, moderno y facil de completar desde movil.",
@@ -1690,18 +1776,19 @@
           navInicio: "Inici",
           navServicios: "Serveis",
           navProceso: "Proces",
-          navResenas: "Ressenyes",
+          navReseñas: "Ressenyes",
           navPresupuesto: "Pressupost",
           navContacto: "Contacte",
           navFaq: "FAQ",
           heroTag: "Mudances locals i nacionals",
           heroTitle: "Mudances facils a <span>Vilafranca</span>",
           heroText: "Mudanzas Vilafranca ofereix serveis de mudances locals i nacionals per a llars, pisos, oficines i negocis. El nostre equip s'encarrega de l'embalatge, desmuntatge, carrega, transport, descarrega i muntatge de mobles amb tracte curos i puntual. Treballem a Vilafranca del Penedes i voltants, preparant cada trasllat segons la distancia, el volum i les necessitats del client. Si busques una empresa de mudances professional, rapida i segura, demana pressupost sense compromis. Organitzem caixes, protegim objectes delicats i planifiquem cada detall perque el teu canvi de vivienda o local sigui comode des del primer contacte fins a entrega final amb cura i seguretat.",
-          heroPrimary: "Demanar pressupost",
+          heroPrimary: "Demana pressupost",
           heroSecondary: "Veure ressenyes",
           mini1: "Resposta rapida",
           mini2: "Mobles protegits",
           mini3: "Serveis complets",
+          mini4: "Pressupost sense compromis",
           demoTitle: "Pressupost en pocs passos",
           demoText: "Origen, destinacio, data i volum per preparar una proposta clara.",
           serviciosTag: "Serveis",
@@ -1727,20 +1814,20 @@
           paso3Text: "Organitzem caixes, proteccions i temps de recollida.",
           paso4Title: "Entrega",
           paso4Text: "Transportem, descarreguem i col.loquem segons l'acordat.",
-          resenasTag: "Ressenyes",
-          resenasTitle: "Un bloc preparat per mostrar opinions reals",
-          resenasText: "Inclou espai per a widget automatic i targetes manuals de suport.",
+          reseñasTag: "Ressenyes",
+          reseñasTitle: "Clients que confien en Mudanzas Vilafranca",
+          reseñasText: "Opinions destacades per mostrar confianca des del primer cop d'ull.",
           widgetAviso: "Aqui es mostrara el widget automatic de ressenyes quan enganxis el codi de la plataforma.",
           googleSubtitle: "Ressenyes visibles en aquesta pagina",
           editable: "Contingut editable",
           notaGoogle: "5 estrelles",
           notaGoogleText: "Mes notes i comentaris actualitzats a Google",
-          resena1Title: "Ressenya real 1",
-          resena1Text: "\"Enganxa aqui el text exacte de la primera ressenya de Google.\"",
-          resena2Title: "Ressenya real 2",
-          resena2Text: "\"Enganxa aqui el text exacte de la segona ressenya de Google.\"",
-          resena3Title: "Ressenya real 3",
-          resena3Text: "\"Enganxa aqui el text exacte de la tercera ressenya de Google.\"",
+          reseña1Title: "Ressenya real 1",
+          reseña1Text: "\"Enganxa aqui el text exacte de la primera ressenya de Google.\"",
+          reseña2Title: "Ressenya real 2",
+          reseña2Text: "\"Enganxa aqui el text exacte de la segona ressenya de Google.\"",
+          reseña3Title: "Ressenya real 3",
+          reseña3Text: "\"Enganxa aqui el text exacte de la tercera ressenya de Google.\"",
           notaLegal: "Substitueix aquests textos per les ressenyes reals copiades de Google si vols mostrar comentaris exactes de clients.",
           presupuestoTag: "Pressupost online",
           presupuestoTitle: "Rep sol.licituds des de la web",
@@ -1793,7 +1880,7 @@
           navInicio: "Home",
           navServicios: "Services",
           navProceso: "Process",
-          navResenas: "Reviews",
+          navReseñas: "Reviews",
           navPresupuesto: "Quote",
           navContacto: "Contact",
           navFaq: "FAQ",
@@ -1805,6 +1892,7 @@
           mini1: "Fast reply",
           mini2: "Protected furniture",
           mini3: "Complete services",
+          mini4: "No-obligation quote",
           demoTitle: "Quote in a few steps",
           demoText: "Origin, destination, date and volume to prepare a clear proposal.",
           serviciosTag: "Services",
@@ -1830,20 +1918,20 @@
           paso3Text: "We organize boxes, protection and pickup times.",
           paso4Title: "Delivery",
           paso4Text: "We transport, unload and place items as agreed.",
-          resenasTag: "Reviews",
-          resenasTitle: "A block ready to show real opinions",
-          resenasText: "Includes space for an automatic widget and manual backup cards.",
+          reseñasTag: "Reviews",
+          reseñasTitle: "Customers who trust Mudanzas Vilafranca",
+          reseñasText: "Highlighted reviews to show trust at first glance.",
           widgetAviso: "The automatic review widget will appear here when you paste the platform code.",
           googleSubtitle: "Reviews visible on this page",
           editable: "Editable content",
           notaGoogle: "5 stars",
           notaGoogleText: "More updated ratings and comments on Google",
-          resena1Title: "Real review 1",
-          resena1Text: "\"Paste here the exact text of the first Google review.\"",
-          resena2Title: "Real review 2",
-          resena2Text: "\"Paste here the exact text of the second Google review.\"",
-          resena3Title: "Real review 3",
-          resena3Text: "\"Paste here the exact text of the third Google review.\"",
+          reseña1Title: "Real review 1",
+          reseña1Text: "\"Paste here the exact text of the first Google review.\"",
+          reseña2Title: "Real review 2",
+          reseña2Text: "\"Paste here the exact text of the second Google review.\"",
+          reseña3Title: "Real review 3",
+          reseña3Text: "\"Paste here the exact text of the third Google review.\"",
           notaLegal: "Replace these texts with real reviews copied from Google if you want to show exact customer comments.",
           presupuestoTag: "Online quote",
           presupuestoTitle: "Receive requests from the website",
@@ -1915,6 +2003,45 @@
         }
       };
 
+      const iniciarRotacionElfsight = () => {
+        if (!widgetReseñas) {
+          return;
+        }
+
+        const obtenerBotonSiguiente = () => {
+          const controles = widgetReseñas.querySelectorAll("button, a, [role='button']");
+          return Array.from(controles).find((control) => {
+            const textoControl = [
+              control.textContent,
+              control.getAttribute("aria-label"),
+              control.getAttribute("title"),
+              control.className
+            ]
+              .join(" ")
+              .toLowerCase();
+
+            return textoControl.includes("next") || textoControl.includes("siguiente") || textoControl.includes("arrow-right") || textoControl.includes("right");
+          });
+        };
+
+        const avanzarReseña = () => {
+          const botonSiguiente = obtenerBotonSiguiente();
+          if (botonSiguiente) {
+            botonSiguiente.click();
+          }
+        };
+
+        const observadorElfsight = new MutationObserver(() => {
+          if (obtenerBotonSiguiente()) {
+            avanzarReseña();
+            observadorElfsight.disconnect();
+          }
+        });
+
+        observadorElfsight.observe(widgetReseñas, { childList: true, subtree: true });
+        setInterval(avanzarReseña, 4500);
+      };
+
       const aplicarIdioma = (idioma) => {
         const t = textos[idioma];
         idiomaActual = idioma;
@@ -1926,7 +2053,7 @@
         setText('.menu a[href="#inicio"]', t.navInicio);
         setText('.menu a[href="#servicios"]', t.navServicios);
         setText('.menu a[href="#proceso"]', t.navProceso);
-        setText('.menu a[href="#resenas"]', t.navResenas);
+        setText('.menu a[href="#reseñas"]', t.navReseñas);
         setText('.menu a[href="#presupuesto"]', t.navPresupuesto);
         setText('.menu a[href="#contacto"]', t.navContacto);
         setText('.menu a[href="#faq"]', t.navFaq);
@@ -1936,10 +2063,11 @@
         setHTML("#inicio h1", t.heroTitle);
         setText("#inicio .hero-contenido > p:nth-of-type(2)", t.heroText);
         setText('#inicio .acciones a[href="#presupuesto"]', t.heroPrimary);
-        setText('#inicio .acciones a[href="#resenas"]', t.heroSecondary);
+        setText('#inicio .acciones a[href="#reseñas"]', t.heroSecondary);
         setText("#inicio .mini-dato:nth-child(1) span", t.mini1);
         setText("#inicio .mini-dato:nth-child(2) span", t.mini2);
         setText("#inicio .mini-dato:nth-child(3) span", t.mini3);
+        setText("#inicio .mini-dato:nth-child(4) span", t.mini4);
         setText(".tarjeta-flotante h3", t.demoTitle);
         setText(".tarjeta-flotante p", t.demoText);
 
@@ -1968,21 +2096,17 @@
         setText("#proceso .paso:nth-child(4) h3", t.paso4Title);
         setText("#proceso .paso:nth-child(4) p", t.paso4Text);
 
-        setText("#resenas .etiqueta", t.resenasTag);
-        setText("#resenas .cabecera-seccion h2", t.resenasTitle);
-        setText("#resenas .cabecera-seccion p:last-child", t.resenasText);
-        setText("#resenas .widget-aviso", t.widgetAviso);
-        setText("#resenas .google-marca p", t.googleSubtitle);
-        setText("#resenas .enlace-texto", t.editable);
-        setText("#resenas .nota-google", t.notaGoogle);
-        setText("#resenas .resumen-google p", t.notaGoogleText);
-        setText("#resenas .resena-mini:nth-child(1) strong", t.resena1Title);
-        setText("#resenas .resena-mini:nth-child(1) p", t.resena1Text);
-        setText("#resenas .resena-mini:nth-child(2) strong", t.resena2Title);
-        setText("#resenas .resena-mini:nth-child(2) p", t.resena2Text);
-        setText("#resenas .resena-mini:nth-child(3) strong", t.resena3Title);
-        setText("#resenas .resena-mini:nth-child(3) p", t.resena3Text);
-        setText("#resenas .nota-legal", t.notaLegal);
+        setText("#reseñas .etiqueta", t.reseñasTag);
+        setText("#reseñas .cabecera-seccion h2", t.reseñasTitle);
+        setText("#reseñas .cabecera-seccion p:last-child", t.reseñasText);
+        setText("#reseñas .widget-aviso", t.widgetAviso);
+        setText("#reseñas .reseña-mini:nth-child(1) strong", t.reseña1Title);
+        setText("#reseñas .reseña-mini:nth-child(1) p", t.reseña1Text);
+        setText("#reseñas .reseña-mini:nth-child(2) strong", t.reseña2Title);
+        setText("#reseñas .reseña-mini:nth-child(2) p", t.reseña2Text);
+        setText("#reseñas .reseña-mini:nth-child(3) strong", t.reseña3Title);
+        setText("#reseñas .reseña-mini:nth-child(3) p", t.reseña3Text);
+        setText("#reseñas .nota-legal", t.notaLegal);
 
         setText("#presupuesto .etiqueta", t.presupuestoTag);
         setText("#presupuesto h2", t.presupuestoTitle);
@@ -2078,6 +2202,7 @@ ${t.emailDetails}: ${mensaje}
       });
 
       aplicarIdioma(idiomaActual);
+      window.addEventListener("load", iniciarRotacionElfsight);
     </script>
   </body>
 </html>
