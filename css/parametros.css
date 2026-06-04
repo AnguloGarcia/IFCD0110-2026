@@ -1,0 +1,81 @@
+*{
+    font-size: 1rem;
+    padding: 0;
+}
+
+.playwrite-gb-j-<uniquifier> {
+  font-family: "Playwrite GB J", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+html,
+body {
+    height: 100%;
+}
+
+body{
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playwrite GB J", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display: grid;
+    min-height: 100vh;
+    grid-template-areas:
+      "cap cap cap"
+      "llista contingut baner"
+      "footer footer footer";
+    grid-template-rows: 2rem 1fr 2rem;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+header,
+footer {
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    width: 100%;
+    height: 3rem;
+}
+
+main{
+    background-color: darkgoldenrod;
+    width: 100%;
+    height: 100%;
+}
+    header{
+        grid-area: cap;
+    }
+    nav{
+        grid-area: llista;
+        background-color: lightcoral;
+    }
+    main{
+        grid-area: contingut;
+        
+    }
+    aside{
+        grid-area: baner;
+        background-color: lightgreen;
+    }
+    footer{
+        grid-area: footer;}
+        ul{
+            list-style: none;
+            text-align: center;
+            padding-left: 0;
+        }
+        li{
+            transition:all 0.3s ease;
+        }
+        li:hover{
+            background-color: lightblue;
+            transition:all 0.3s ease;
+            transform: scale(1.1);
+            cursor: pointer;
+            border-radius: 4px;
+        }

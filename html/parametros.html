@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+    <meta charset="utf-8"/>
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="../css/parametros.css">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  -->
+    <title>parametros</title>
+  </head>
+  <body>
+    <header>paso de valores entre archivos</header>
+    <nav>
+        <ul>
+            <li>home </li>
+            <li>qui som</li>
+            <li>historia</li>
+            <li>contacto</li>
+        </ul>
+    </nav>
+    <main>aqui va el contenido</main>
+    <aside style="background-color: lightgreen;">aqui van los anuncios</aside>
+    <footer style="background-color: rgb(142, 55, 55);"> hecho por jose luis </footer>
+  </body>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const checkin = params.get("checkin");
+    const checkout = params.get("checkout");
+
+    const main = document.querySelector("main");
+    if (main) {
+      if (checkin || checkout) {
+        main.textContent = `Check-in: ${checkin || "no definido"}, Check-out: ${checkout || "no definido"}`;
+      } else {
+        main.textContent = "No hay parámetros en la URL.";
+      }
+    }
+  </script>
+</html>
