@@ -1,0 +1,128 @@
+/*
+	25/FOAP/781/0195135/046	
+	IFCD0110/MF0950_2/UF1303	
+	PA-1C-V2026
+	Pràctica avaluativa
+	Primera convocatòria
+	
+	Defineix aquí les propietats CSS i enllaça'l amb el document index.html tenint en compte les condicions posades.
+	Define aquí las propiedades CSS y enlázalos con el documento index.html teniendo en cuenta las condiciones puestas.
+*/
+
+
+/* Estilos generales de la pagina */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    color: #222;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #1455a0;
+    font-size: 28px;
+}
+
+h2 {
+    color: #222;
+    font-size: 22px;
+}
+
+p {
+    color: #333;
+}
+
+/* Contornos, margenes y acolchado */
+.caja {
+    position: relative;
+    z-index: 2;
+    visibility: visible;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-color: #2c7be5;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.tarjeta {
+    padding: 20px;
+    margin: 20px 0;
+    border: 2px solid #444;
+    transition: transform 4s ease;
+    transition-delay: 2s;
+}
+
+/* Listas y tablas */
+ul {
+    list-style-type: square;
+}
+
+table {
+    border-spacing: 10px;
+}
+
+/* Imagenes */
+img {
+    width: 300px;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Interfaz de usuario */
+button {
+    cursor: pointer;
+}
+
+a {
+    cursor: pointer;
+}
+
+input[type="button"],
+input[type="submit"] {
+    cursor: pointer;
+}
+
+input[type="text"] {
+    padding: 10px;
+}
+
+form > div {
+    margin-bottom: 14px;
+}
+
+/* Comportamientos */
+input:focus {
+    border-color: #ff9800;
+    outline: 2px solid #ff9800;
+    background-color: #fff8e1;
+}
+
+select:focus {
+    border-color: #ff9800;
+    outline: 2px solid #ff9800;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* Traslacion, rotacion, escala y transicion */
+.tarjeta:hover {
+    transform: translateX(20px) rotate(5deg) scale(1.05);
+}
+
+.destacado {
+    font-size: 20px;
+}
+
+h1 + p {
+    color: #555;
+}

@@ -1,0 +1,112 @@
+*{
+    font-size: rem;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+  
+}
+header , footer{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    width: 100%;
+    height: 2rem;
+    position: fixed;
+    }
+    header{
+        top: 0; 
+    }
+    /* pie de pagina fijo en la parte inferior de la pagina */
+    footer{
+        bottom: 0;
+    }
+    /* contenido */
+    main{
+        background-color: darkgoldenrod;
+        top: 2rem;
+        bottom: 2rem;
+        width: 100%;
+        height: calc(100% - 4rem);
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: center;
+    }
+    ul{
+        list-style-type: none;
+        padding-left: 0%;
+
+    }
+    /* menu de navegacio */
+    nav{
+        background-color: rgb(16, 143, 82);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding: 1rem;
+
+    }
+    /* menu de navegacion horizontal */
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+    /* cambio de color al pasar el raton por encima de los elementos del menu de navegacion */
+    nav li:hover{
+        background-color: #e21010;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+    }
+    /* tablas de coches electricos */
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    td, th {
+        border: 3px solid #161515;
+        text-align: left;
+        padding: 8px;
+    }
+    .contenedor{
+        width: 80%;
+        height: 80%;
+        background-color: lightblue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .contenedor h1{
+        font-size: 2rem;
+    }
+    .contenedor p{
+        font-size: 1.2rem;}
+    .modelos{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .modelos img{
+        width: 200px;
+        height: 100px;
+    }
+    video{
+        width: 400px;
+        height: 200px;
+    }   
+
+
+
