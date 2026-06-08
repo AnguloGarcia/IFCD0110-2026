@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 420" role="img" aria-label="Aerogenerador">
+  <rect width="620" height="420" fill="#dbeef3"/>
+  <circle cx="500" cy="82" r="45" fill="#f5b84b"/>
+  <path d="M0 330c82-38 150-42 230-16 94 30 172 24 252-3 58-20 102-18 138 6v103H0Z" fill="#82b86a"/>
+  <path d="M305 135h13v228h-13Z" fill="#6f7e7b"/>
+  <circle cx="312" cy="135" r="17" fill="#ffffff"/>
+  <path d="M312 134 205 91l106 25Zm5 4 93 57-74-75Zm-6-9 20-104 6 101Z" fill="#ffffff"/>
+  <path d="M83 355h455" stroke="#4f8f57" stroke-width="14" stroke-linecap="round"/>
+</svg>

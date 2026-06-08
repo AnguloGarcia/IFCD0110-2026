@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoNova Energía Penedes</title>
+    <link rel="stylesheet" href="renovables.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">EcoNovaPenedes</div>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<main>
+
+<section id="inicio" class="hero">
+    <div>
+        <h1>Energía renovable para tu futuro</h1>
+        <p>
+            És estat doncs molt condecent útil e expedient. De Pompeu d'Octovià de Marc Antoni e de. Fi per què fonc instituït e ordenat. Per la sua gran saviesa e alt enginy havia servit. Vol rebre l'orde de cavalleria; lo quart és de la. Ha ordenat e li plau que los. Lo poble La primera part. Devia que tots ne restaren. Per longitud de temps envellits mas encara los. Sien espills molt clars exemples e virtuosa doctrina de nostra. Servidors la sua partida En la fèrtil rica e. La molta amor que li portava; la feminil condició. Lívius dels romans: d'Escipió d'Anibal de Pompeu d'Octovià de. Fer penitència e esmena de. Molt més de virtuts lo que per la. Antigament l'orde militar era tengut. Militar deu ésser molt decorada. No deu preterir per longitud de molts.
+        </p>
+        <a class="boton" href="#contacto">Pedir presupuesto</a>
+    </div>
+</section>
+
+<section id="productos" class="productos">
+    <h2>Nuestros productos</h2>
+
+    <div class="tarjetas">
+        <article>
+            <h3>Paneles solares</h3>
+            <p>És estat doncs molt condecent útil e expedient. De Pompeu d'Octovià de Marc Antoni e de. Fi per què fonc instituït e ordenat. Per la sua gran saviesa e alt enginy havia servit. Vol rebre l'orde de cavalleria; lo quart és de la. Ha ordenat e li plau que los. Lo poble La primera part. Devia que tots ne restaren. Per longitud de temps envellits mas encara los. Sien espills molt clars exemples e virtuosa doctrina de nostra. Servidors la sua partida En la fèrtil rica e. La molta amor que li portava; la feminil condició. Lívius dels romans: d'Escipió d'Anibal de Pompeu d'Octovià de. Fer penitència e esmena de. Molt més de virtuts lo que per la. Antigament l'orde militar era tengut. Militar deu ésser molt decorada. No deu preterir per longitud de molts.</p>
+        </article>
+
+        <article>
+            <h3>Molinos eólicos</h3>
+            <p>És estat doncs molt condecent útil e expedient. De Pompeu d'Octovià de Marc Antoni e de. Fi per què fonc instituït e ordenat. Per la sua gran saviesa e alt enginy havia servit. Vol rebre l'orde de cavalleria; lo quart és de la. Ha ordenat e li plau que los. Lo poble La primera part. Devia que tots ne restaren. Per longitud de temps envellits mas encara los. Sien espills molt clars exemples e virtuosa doctrina de nostra. Servidors la sua partida En la fèrtil rica e. La molta amor que li portava; la feminil condició. Lívius dels romans: d'Escipió d'Anibal de Pompeu d'Octovià de. Fer penitència e esmena de. Molt més de virtuts lo que per la. Antigament l'orde militar era tengut. Militar deu ésser molt decorada. No deu preterir per longitud de molts.</p>
+        </article>
+
+        <article>
+            <h3>Baterías</h3>
+            <p>És estat doncs molt condecent útil e expedient. De Pompeu d'Octovià de Marc Antoni e de. Fi per què fonc instituït e ordenat. Per la sua gran saviesa e alt enginy havia servit. Vol rebre l'orde de cavalleria; lo quart és de la. Ha ordenat e li plau que los. Lo poble La primera part. Devia que tots ne restaren. Per longitud de temps envellits mas encara los. Sien espills molt clars exemples e virtuosa doctrina de nostra. Servidors la sua partida En la fèrtil rica e. La molta amor que li portava; la feminil condició. Lívius dels romans: d'Escipió d'Anibal de Pompeu d'Octovià de. Fer penitència e esmena de. Molt més de virtuts lo que per la. Antigament l'orde militar era tengut. Militar deu ésser molt decorada. No deu preterir per longitud de molts.</p>
+        </article>
+    </div>
+</section>
+
+<section id="contacto" class="contacto">
+    <h2>Formulario de contacto</h2>
+
+    <form action="" method="get">
+        <label>Nombre y apellidos *</label>
+        <input type="text" name="nombre" required>
+
+        <label>Email *</label>
+        <input type="email" name="email" required>
+
+        <label>Teléfono *</label>
+        <input type="tel" name="telefono" pattern="[0-9]{9}" placeholder="Ej: 600123456" required>
+
+        <p>Tipo de instalación:</p>
+
+        <label>
+            <input type="checkbox" name="instalacion" value="rapida">
+            Instalación rápida
+        </label>
+
+        <label>
+            <input type="checkbox" name="instalacion" value="un_mes">
+            En un mes
+        </label>
+
+        <label>
+            <input type="checkbox" name="instalacion" value="seis_meses">
+            De aquí a 6 meses
+        </label>
+
+        <label>Provincia de instalación</label>
+        <select name="provincia">
+            <option value="barcelona">Barcelona</option>
+            <option value="tarragona">Tarragona</option>
+            <option value="lleida">Lleida</option>
+            <option value="girona">Girona</option>
+        </select>
+
+        <p>Método de pago:</p>
+
+        <label>
+            <input type="radio" name="pago" value="efectivo">
+            Efectivo
+        </label>
+
+        <label>
+            <input type="radio" name="pago" value="credito">
+            Crédito
+        </label>
+
+        <label>
+            <input type="radio" name="pago" value="bizum">
+            Bizum
+        </label>
+
+        <label>Comentarios</label>
+        <textarea name="comentarios" maxlength="200" placeholder="Máximo 200 caracteres"></textarea>
+
+        <button type="submit">Enviar presupuesto</button>
+    </form>
+</section>
+
+</main>
+
+<footer>
+    <p>2026 EcoNovaPenedes Energía - Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>

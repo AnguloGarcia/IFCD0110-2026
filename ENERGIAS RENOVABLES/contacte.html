@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Recicla't Energías Renovables</title>
+    <link rel="stylesheet" href="renovables.css">
+</head>
+<body>
+    <!-- Cabecera con logo y menú de navegación -->
+    <header class="capcalera">
+        <a class="marca" href="renovables.html" aria-label="Inicio Recicla't">
+            <img src="imatges/logo-reciclat.svg" alt="Logotipo de Recicla't">
+            <span>Recicla't</span>
+        </a>
+
+        <!-- Enlaces a las tres páginas de la web -->
+        <nav class="menu" aria-label="Menú principal">
+            <a href="renovables.html">Inicio</a>
+            <a href="productes.html">Productos</a>
+            <a href="contacte.html" class="actiu">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Introducción de la página de contacto -->
+        <section class="pagina-titol">
+            <h1>Pide presupuesto</h1>
+            <p>Completa el formulario y prepararemos una propuesta adaptada a tu instalación </p>
+        </section>
+
+        <!-- Formulario enviado por GET para que los datos aparezcan en la URL -->
+        <form class="formulari" action="contacte.html" method="get">
+            <label for="nom">Nombre y apellidos *</label>
+            <input type="text" id="nom" name="nom_cognoms" required>
+
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefon">Teléfono *</label>
+            <input type="tel" id="telefon" name="telefon" pattern="[0-9]{9}" placeholder="612345678" required>
+
+            <!-- Opciones de plazo con checkboxes -->
+            <fieldset>
+                <legend>¿Cuándo quieres la instalación?</legend>
+                <label><input type="checkbox" name="termini" value="rapida"> Instalación rápida, más caro</label>
+                <label><input type="checkbox" name="termini" value="un_mes"> En un mes</label>
+                <label><input type="checkbox" name="termini" value="sis_mesos"> Dentro de 6 meses, más barato</label>
+            </fieldset>
+
+            <label for="provincia">Provincia de instalación</label>
+            <select id="provincia" name="provincia">
+                <option value="Barcelona">Barcelona</option>
+                <option value="Tarragona">Tarragona</option>
+                <option value="Lleida">Lleida</option>
+                <option value="Girona">Girona</option>
+            </select>
+
+            <!-- Método de pago  -->
+            <fieldset>
+                <legend>Método de pago</legend>
+                <label><input type="radio" name="pagament" value="efectiu" required> Efectivo</label>
+                <label><input type="radio" name="pagament" value="credit"> Crédito</label>
+                <label><input type="radio" name="pagament" value="bizum"> Bizum</label>
+            </fieldset>
+
+            <label for="comentaris">Comentarios</label>
+            <textarea id="comentaris" name="comentaris" maxlength="200" rows="5" placeholder="Máximo 200 caracteres"></textarea>
+
+            <button class="boto" type="submit">Enviar presupuesto</button>
+        </form>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Recicla Energías Renovables · Barcelona </p>
+    </footer>
+</body>
+</html>

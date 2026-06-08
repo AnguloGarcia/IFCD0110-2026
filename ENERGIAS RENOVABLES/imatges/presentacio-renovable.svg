@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 520" role="img" aria-label="Casa con energía renovable">
+  <rect width="780" height="520" fill="#ddecf0"/>
+  <circle cx="650" cy="95" r="58" fill="#f5b84b"/>
+  <path d="M0 380c96-42 170-48 260-18 120 41 215 37 325-3 74-27 132-24 195 6v155H0Z" fill="#7fba6b"/>
+  <path d="M92 345h318v112H92Z" fill="#f7f1df"/>
+  <path d="M70 350 248 214l185 136Z" fill="#1f5a35"/>
+  <path d="M152 340h190l-95-70Z" fill="#2f78ad"/>
+  <path d="M126 365h66v92h-66Z" fill="#8b5a32"/>
+  <path d="M230 365h136v62H230Z" fill="#2f78ad"/>
+  <path d="M246 377h45v38h-45Zm59 0h45v38h-45Z" fill="#bfe3f4"/>
+  <path d="M548 178h14v245h-14Z" fill="#6f7e7b"/>
+  <circle cx="555" cy="178" r="15" fill="#f7f1df"/>
+  <path d="M555 177 480 145l75 18Zm3 3 70 38-55-55Zm-4-7 14-78 4 76Z" fill="#ffffff"/>
+  <path d="M410 424h260" stroke="#4f8f57" stroke-width="18" stroke-linecap="round"/>
+</svg>
