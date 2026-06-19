@@ -3,7 +3,38 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mudanzas Vilafranca</title>
+    <title>Mudanzas Vilafranca | Empresa de Mudanzas en Vilafranca y Barcelona</title>
+    <meta name="description" content="Empresa de mudanzas en Vilafranca del Penedes y Barcelona. Mudanzas economicas, urgentes y con plataforma elevadora. Presupuesto gratis por WhatsApp en 24h." />
+    <meta name="keywords" content="mudanzas en Barcelona, mudanzas en Vilafranca, mudanzas economicas, mudanzas con plataforma, empresa de mudanzas, transporte de muebles, mudanzas urgentes, presupuesto de mudanza" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.mudanzasvilafranca.com/" />
+
+    <meta property="og:type" content="business.business" />
+    <meta property="og:title" content="Mudanzas Vilafranca | Empresa de mudanzas en Vilafranca y Barcelona" />
+    <meta property="og:description" content="Mudanzas locales y nacionales, con plataforma elevadora, embalaje y montaje de muebles. Presupuesto gratis y respuesta en 24h por WhatsApp." />
+    <meta property="og:image" content="../images/mudanzas-hero.png" />
+    <meta property="og:locale" content="es_ES" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MovingCompany",
+        "name": "Mudanzas Vilafranca",
+        "image": "../images/logomudanza.png.png",
+        "description": "Empresa de mudanzas en Vilafranca del Penedes y Barcelona. Mudanzas de hogar, oficinas, embalaje, montaje y mudanzas con plataforma elevadora.",
+        "telephone": "+34657560728",
+        "email": "lagentesi@gmail.com",
+        "areaServed": ["Vilafranca del Penedes", "Barcelona", "Espana"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Vilafranca del Penedes",
+          "addressRegion": "Barcelona",
+          "addressCountry": "ES"
+        },
+        "priceRange": "€€",
+        "openingHours": "Mo-Sa 08:00-20:00"
+      }
+    </script>
     <style>
       * {
         box-sizing: border-box;
@@ -142,6 +173,31 @@
         padding: 7px 10px;
       }
 
+      .boton-llamar {
+        align-items: center;
+        background: #0b1f3a;
+        border-radius: 999px;
+        color: #ffffff;
+        display: inline-flex;
+        flex: 0 0 auto;
+        font-weight: 900;
+        gap: 8px;
+        padding: 10px 16px;
+        transition: background 0.3s ease, transform 0.3s ease;
+        white-space: nowrap;
+      }
+
+      .boton-llamar:hover {
+        background: #15315a;
+        transform: translateY(-2px);
+      }
+
+      .boton-llamar svg {
+        flex-shrink: 0;
+        height: 18px;
+        width: 18px;
+      }
+
       .logo {
         align-items: center;
         display: flex;
@@ -276,18 +332,6 @@
         font: inherit;
         font-weight: 900;
         padding: 11px 16px;
-      }
-
-      .idioma-control {
-        align-items: center;
-        background: #ffffff;
-        border: 1px solid rgba(11, 31, 58, 0.12);
-        border-radius: 999px;
-        display: flex;
-        flex: 0 0 auto;
-        gap: 8px;
-        margin-left: auto;
-        padding: 7px 10px;
       }
 
       .idioma-label {
@@ -540,6 +584,11 @@
         scroll-margin-top: 250px;
       }
 
+      #elegirnos,
+      #zonas {
+        scroll-margin-top: 200px;
+      }
+
       .seccion.clara {
         background: #ffffff;
       }
@@ -744,6 +793,12 @@
       .paso {
         background: rgba(255, 255, 255, 0.08);
         border: 1px solid rgba(255, 255, 255, 0.14);
+      }
+
+      /* Variante de tarjeta "paso" para usar sobre fondo claro (seccion.clara) */
+      .paso.clara {
+        background: #ffffff;
+        border: 1px solid rgba(11, 31, 58, 0.1);
       }
 
       .numero {
@@ -1035,8 +1090,70 @@
       footer {
         background: #0b1f3a;
         color: #ffffff;
-        padding: 30px 6%;
+        padding: 60px 6% 30px;
+      }
+
+      .footer-grid {
+        display: grid;
+        gap: 32px;
+        grid-template-columns: 1.4fr 1fr 1fr;
+        margin: 0 auto 40px;
+        max-width: 1180px;
+      }
+
+      .footer-titulo {
+        color: #d6b56d;
+        display: block;
+        font-size: 24px;
+        font-weight: 900;
+        margin-bottom: 12px;
+      }
+
+      .footer-marca p {
+        color: #d9e1ec;
+        font-size: 15px;
+        max-width: 420px;
+      }
+
+      .footer-columna h3 {
+        color: #ffffff;
+        font-size: 16px;
+        margin-bottom: 14px;
+      }
+
+      .footer-columna ul {
+        display: grid;
+        gap: 10px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .footer-columna a,
+      .footer-columna li {
+        color: #d9e1ec;
+        font-size: 15px;
+      }
+
+      .footer-columna a:hover {
+        color: #d6b56d;
+      }
+
+      .footer-legal {
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+        color: #9fb0c6;
+        font-size: 14px;
+        margin: 0 auto;
+        max-width: 1180px;
+        padding-top: 22px;
         text-align: center;
+      }
+
+      @media (max-width: 700px) {
+        .footer-grid {
+          grid-template-columns: 1fr;
+          text-align: left;
+        }
       }
 
       @keyframes aparecer {
@@ -1102,29 +1219,15 @@
         }
       }
 
-      @media (max-width: 700px) {
-        .cabecera {
-          align-items: stretch;
-          flex-direction: column;
-          min-height: 190px;
-          overflow: hidden;
-          padding: 14px 20px;
-        }
-
-        .cabecera-superior {
-          justify-content: flex-start;
-          min-height: 82px;
-          position: static;
-          width: 100%;
-        }
-
-        .cabecera-inferior {
-          align-items: flex-start;
-          padding: 0;
-          position: relative;
-          z-index: 1;
-        }
-
+      /*
+        El menu principal tiene 6 enlaces (los esenciales: Inicio, Servicios,
+        Resenas, Presupuesto, Contacto y FAQ). "Proceso", "Por que elegirnos"
+        y "Zonas" siguen existiendo en la pagina, accesibles desde botones y
+        el footer, sin ocupar sitio en el menu. Con 6 enlaces ya cabe en una
+        fila hasta tablets pequenas, asi que el menu hamburguesa solo se
+        activa por debajo de 860px.
+      */
+      @media (max-width: 860px) {
         .boton-menu {
           align-self: flex-start;
           background: #d6b56d;
@@ -1148,15 +1251,54 @@
           flex-direction: column;
           margin-top: 14px;
           text-align: center;
+          width: 100%;
         }
 
         .menu a {
           display: block;
         }
 
+        .cabecera-inferior {
+          align-items: flex-start;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .cabecera {
+          align-items: stretch;
+          flex-direction: column;
+          min-height: 190px;
+          overflow: hidden;
+          padding: 14px 20px;
+        }
+
+        .cabecera-superior {
+          justify-content: flex-start;
+          min-height: 82px;
+          position: static;
+          width: 100%;
+        }
+
+        .cabecera-inferior {
+          align-items: flex-start;
+          padding: 0;
+          position: relative;
+          z-index: 1;
+        }
+
         .idioma-control {
           justify-content: flex-start;
-          margin-left: 0;
+          margin-left: auto;
+          position: relative;
+          z-index: 2;
+        }
+
+        .boton-llamar span {
+          display: none;
+        }
+
+        .boton-llamar {
+          padding: 10px;
           position: relative;
           z-index: 2;
         }
@@ -1269,6 +1411,12 @@
             <span class="logo-lema">Tu hogar en buenas manos</span>
           </span>
         </a>
+        <a class="boton-llamar" href="tel:+34657560728" aria-label="Llamar ahora a Mudanzas Vilafranca">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 5 5L14 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span>Llámanos ahora</span>
+        </a>
         <div class="idioma-control">
           <label class="idioma-label" for="selector-idioma">Idioma</label>
           <select class="idioma-select" id="selector-idioma" aria-label="Seleccionar idioma">
@@ -1287,7 +1435,6 @@
           <ul class="menu">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#proceso">Proceso</a></li>
             <li><a href="#reseñas">Reseñas</a></li>
             <li><a href="#presupuesto">Presupuesto</a></li>
             <li><a href="#contacto">Contacto</a></li>
@@ -1300,8 +1447,8 @@
     <main>
       <section class="hero" id="inicio">
         <div class="hero-contenido">
-          <p class="etiqueta">Mudanzas locales y nacionales</p>
-          <h1>Mudanzas faciles en <span>Vilafranca</span></h1>
+          <p class="etiqueta">Mudanzas en Vilafranca y Barcelona</p>
+          <h1>Mudanzas faciles y seguras en <span>Vilafranca y Barcelona</span></h1>
           <p>
             Mudanzas Vilafranca ofrece servicios de mudanzas locales y nacionales para hogares,
             pisos, oficinas y negocios. Nuestro equipo se encarga del embalaje, desmontaje,
@@ -1314,8 +1461,13 @@
             el primer contacto hasta la entrega final completa.
           </p>
           <div class="acciones">
-            <a class="boton verde" href="#presupuesto">Pide presupuesto</a>
-            <a class="boton secundario" href="#reseñas">Ver reseñas</a>
+            <a class="boton verde" href="#presupuesto">Pide tu presupuesto gratis</a>
+            <a
+              class="boton secundario"
+              href="https://wa.me/34657560728?text=Hola%2C%20quiero%20pedir%20informacion%20sobre%20una%20mudanza."
+              target="_blank"
+              rel="noopener"
+            >Enviar WhatsApp</a>
           </div>
           <div class="mini-datos">
             <div class="mini-dato">
@@ -1345,7 +1497,7 @@
               <span class="punto"></span>
             </div>
             <div class="imagen-demo">
-              <img src="../images/mudanzas-hero.png" alt="Equipo profesional realizando una mudanza" />
+              <img src="../images/mudanzas-hero.png" alt="Equipo profesional de Mudanzas Vilafranca cargando una furgoneta de mudanzas" width="640" height="556" loading="eager" />
             </div>
             <div class="tarjeta-flotante">
               <h3>Presupuesto en pocos pasos</h3>
@@ -1365,7 +1517,7 @@
         <div class="grid-servicios">
           <article class="servicio" tabindex="0">
             <figure class="servicio-imagen">
-              <img src="https://images.pexels.com/photos/3434533/pexels-photo-3434533.jpeg?cs=srgb&amp;dl=pexels-bemistermister-3434533.jpg&amp;fm=jpg" alt="Mudanza de hogar dentro de una vivienda con cajas preparadas" />
+              <img src="https://images.pexels.com/photos/3434533/pexels-photo-3434533.jpeg?cs=srgb&amp;dl=pexels-bemistermister-3434533.jpg&amp;fm=jpg" alt="Mudanza de hogar en Vilafranca con cajas de embalaje preparadas" width="400" height="420" loading="lazy" />
             </figure>
             <div class="icono" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
@@ -1382,7 +1534,7 @@
 
           <article class="servicio" tabindex="0">
             <figure class="servicio-imagen">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Desks_and_cubicles_%28Unsplash%29.jpg" alt="Mudanza de oficina con mesas, sillas y puestos de trabajo" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Desks_and_cubicles_%28Unsplash%29.jpg" alt="Mudanza de oficina en Barcelona con mesas, sillas y puestos de trabajo" width="400" height="420" loading="lazy" />
             </figure>
             <div class="icono" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
@@ -1402,7 +1554,7 @@
 
           <article class="servicio" tabindex="0">
             <figure class="servicio-imagen">
-              <img src="https://images.pexels.com/photos/7217849/pexels-photo-7217849.jpeg?cs=srgb&amp;dl=pexels-blue-bird-7217849.jpg&amp;fm=jpg" alt="Embalaje profesional de cajas para mudanzas y montaje de muebles" />
+              <img src="https://images.pexels.com/photos/7217849/pexels-photo-7217849.jpeg?cs=srgb&amp;dl=pexels-blue-bird-7217849.jpg&amp;fm=jpg" alt="Embalaje profesional de cajas para mudanzas economicas y montaje de muebles" width="400" height="420" loading="lazy" />
             </figure>
             <div class="icono" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
@@ -1420,7 +1572,7 @@
 
           <article class="servicio" tabindex="0">
             <figure class="servicio-imagen">
-              <img src="../images/elevador.jpg" alt="Mudanza con plataforma elevadora para subir muebles por fachada" />
+              <img src="../images/elevador.jpg" alt="Mudanza urgente con plataforma elevadora para subir muebles por fachada" width="400" height="420" loading="lazy" />
             </figure>
             <div class="icono" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
@@ -1450,7 +1602,7 @@
               muebles para que cada mudanza local o nacional sea rapida, ordenada, profesional
               y sin preocupaciones para hogares y negocios.
             </p>
-            <a class="boton" href="#presupuesto">Empezar ahora</a>
+            <a class="boton" href="#presupuesto">Calcula tu mudanza</a>
           </div>
 
           <div class="grid-pasos">
@@ -1463,19 +1615,19 @@
             <article class="paso">
               <div class="numero">2</div>
               <h3>Presupuesto</h3>
-              <p>Preparamos una orientacion clara y sin compromiso.</p>
+              <p>Con la informacion de la visita preparamos un presupuesto detallado y sin compromiso, desglosado por volumen, distancia, embalaje y servicios adicionales, para que sepas exactamente que incluye tu mudanza y puedas decidir con confianza, sin sorpresas ni costes ocultos al final.</p>
             </article>
 
             <article class="paso">
               <div class="numero">3</div>
               <h3>Preparacion</h3>
-              <p>Organizamos cajas, protecciones y tiempos de recogida.</p>
+              <p>Organizamos cajas, plastico protector, mantas y etiquetas para cada habitacion, desmontamos muebles grandes y coordinamos fechas y horarios de recogida con el equipo, dejando todo listo y protegido para que la carga sea rapida, ordenada y sin imprevistos el dia de la mudanza.</p>
             </article>
 
             <article class="paso">
               <div class="numero">4</div>
               <h3>Entrega</h3>
-              <p>Transportamos, descargamos y colocamos segun lo acordado.</p>
+              <p>Transportamos tus pertenencias con cuidado, descargamos en el nuevo domicilio u oficina y colocamos cada mueble y caja en el lugar acordado, incluyendo montaje si es necesario, para que termines la mudanza con todo en su sitio y sin trabajo pendiente.</p>
             </article>
           </div>
         </div>
@@ -1484,8 +1636,8 @@
       <section class="seccion clara" id="reseñas">
         <div class="cabecera-seccion">
           <p class="etiqueta">Reseñas</p>
-          <h2>Un bloque preparado para mostrar opiniones reales</h2>
-          <p>Incluye hueco para widget automatico y tarjetas manuales de respaldo.</p>
+          <h2>Clientes que confían en Mudanzas Vilafranca</h2>
+          <p>Opiniones reales de quienes ya han hecho su mudanza con nosotros.</p>
         </div>
 
         <div class="widget-automatico-reseñas">
@@ -1506,6 +1658,78 @@
           </p> -->
         </div>
 
+        <div class="tarjetas-reseñas">
+          <article class="reseña-mini">
+            <p class="estrellas">��&��&��&��&��&</p>
+            <strong>Reseña real 1</strong>
+            <p>"Pega aqui el texto exacto de la primera reseña de Google."</p>
+          </article>
+          <article class="reseña-mini">
+            <p class="estrellas">��&��&��&��&��&</p>
+            <strong>Reseña real 2</strong>
+            <p>"Pega aqui el texto exacto de la segunda reseña de Google."</p>
+          </article>
+          <article class="reseña-mini">
+            <p class="estrellas">��&��&��&��&��&</p>
+            <strong>Reseña real 3</strong>
+            <p>"Pega aqui el texto exacto de la tercera reseña de Google."</p>
+          </article>
+        </div>
+        <p class="nota-legal">Sustituye estos textos por las reseñas reales copiadas desde Google si quieres mostrar comentarios exactos de clientes.</p>
+      </section>
+
+      <section class="seccion clara" id="elegirnos">
+        <div class="cabecera-seccion">
+          <p class="etiqueta">Por que elegirnos</p>
+          <h2>La empresa de mudanzas de confianza en Vilafranca y Barcelona</h2>
+          <p>Rapidez, seguridad y precios claros en cada mudanza que realizamos.</p>
+        </div>
+
+        <div class="grid-pasos">
+          <article class="paso clara">
+            <h3>Mudanzas economicas</h3>
+            <p>Presupuestos ajustados y sin sorpresas, adaptados al volumen real de tu mudanza.</p>
+          </article>
+          <article class="paso clara">
+            <h3>Mudanzas urgentes</h3>
+            <p>Disponibilidad rapida para traslados de ultima hora en Vilafranca y Barcelona.</p>
+          </article>
+          <article class="paso clara">
+            <h3>Equipo profesional</h3>
+            <p>Personal experimentado en embalaje, desmontaje y transporte de muebles.</p>
+          </article>
+          <article class="paso clara">
+            <h3>Plataforma elevadora</h3>
+            <p>Solucion segura para pisos sin ascensor o con accesos dificiles.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="seccion oscura" id="zonas">
+        <div class="cabecera-seccion">
+          <p class="etiqueta">Zonas de trabajo</p>
+          <h2>Mudanzas en Vilafranca, Barcelona y alrededores</h2>
+          <p>Cubrimos toda la comarca del Penedes y la provincia de Barcelona, ademas de mudanzas nacionales a toda España.</p>
+        </div>
+
+        <div class="grid-pasos">
+          <article class="paso">
+            <h3>Vilafranca del Penedes</h3>
+            <p>Mudanzas locales rapidas dentro de la ciudad y sus barrios.</p>
+          </article>
+          <article class="paso">
+            <h3>Barcelona y area metropolitana</h3>
+            <p>Transporte de muebles y mudanzas de hogar u oficina en Barcelona ciudad.</p>
+          </article>
+          <article class="paso">
+            <h3>Comarca del Penedes</h3>
+            <p>Servicio en Sant Sadurni, Vilanova i la Geltru, Igualada y poblaciones cercanas.</p>
+          </article>
+          <article class="paso">
+            <h3>Resto de España</h3>
+            <p>Mudanzas nacionales planificadas con fecha y entrega garantizadas.</p>
+          </article>
+        </div>
       </section>
 
       <section class="seccion" id="presupuesto">
@@ -1652,7 +1876,37 @@
       <span>WhatsApp</span>
     </a>
 
-    <footer>2026 Mudanzas Vilafranca - Todos los derechos reservados</footer>
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-marca">
+          <span class="footer-titulo">Mudanzas Vilafranca</span>
+          <p>Empresa de mudanzas en Vilafranca del Penedes y Barcelona. Mudanzas de hogar, oficinas, embalaje, montaje y mudanzas con plataforma elevadora, con presupuesto claro y atencion rapida.</p>
+        </div>
+
+        <div class="footer-columna">
+          <h3>Enlaces</h3>
+          <ul>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#elegirnos">Por que elegirnos</a></li>
+            <li><a href="#zonas">Zonas de trabajo</a></li>
+            <li><a href="#presupuesto">Presupuesto</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-columna">
+          <h3>Contacto</h3>
+          <ul>
+            <li><a href="tel:+34657560728">+34 657 56 07 28</a></li>
+            <li><a href="https://wa.me/34657560728?text=Hola%2C%20quiero%20pedir%20informacion%20sobre%20una%20mudanza.">WhatsApp</a></li>
+            <li><a href="mailto:lagentesi@gmail.com">lagentesi@gmail.com</a></li>
+            <li>Vilafranca del Penedes, Barcelona</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer-legal">� 2026 Mudanzas Vilafranca - Todos los derechos reservados</p>
+    </footer>
 
     <script>
       const botonMenu = document.querySelector(".boton-menu");
@@ -1676,11 +1930,11 @@
           navPresupuesto: "Presupuesto",
           navContacto: "Contacto",
           navFaq: "FAQ",
-          heroTag: "Mudanzas locales y nacionales",
-          heroTitle: "Mudanzas faciles en <span>Vilafranca</span>",
+          heroTag: "Mudanzas en Vilafranca y Barcelona",
+          heroTitle: "Mudanzas faciles y seguras en <span>Vilafranca y Barcelona</span>",
           heroText: "Mudanzas Vilafranca ofrece servicios de mudanzas locales y nacionales para hogares, pisos, oficinas y negocios. Nuestro equipo se encarga del embalaje, desmontaje, carga, transporte, descarga y montaje de muebles con trato cuidadoso y puntual. Trabajamos en Vilafranca del Penedes y alrededores, preparando cada traslado segun la distancia, el volumen y las necesidades del cliente. Si buscas una empresa de mudanzas profesional, rapida y segura, solicita presupuesto sin compromiso. Organizamos cajas, protegemos objetos delicados y planificamos cada detalle para que tu cambio de vivienda o local sea comodo, claro y sin preocupaciones desde el primer contacto hasta la entrega final completa.",
-          heroPrimary: "Pide presupuesto",
-          heroSecondary: "Ver reseñas",
+          heroPrimary: "Pide tu presupuesto gratis",
+          heroSecondary: "Enviar WhatsApp",
           mini1: "Respuesta rapida",
           mini2: "Muebles protegidos",
           mini3: "Servicios completos",
@@ -1701,15 +1955,15 @@
           procesoTag: "Funcionamiento",
           procesoTitle: "Como funciona el servicio",
           procesoText: "Nuestro proceso de mudanzas en Vilafranca empieza con una consulta personalizada, continua con presupuesto claro, embalaje seguro, planificacion del transporte y entrega puntual. Coordinamos fechas, volumen, acceso, montaje y proteccion de muebles para que cada mudanza local o nacional sea rapida, ordenada, profesional y sin preocupaciones para hogares y negocios.",
-          procesoButton: "Empezar ahora",
+          procesoButton: "Calcula tu mudanza",
           paso1Title: "Consulta",
           paso1Text: "En la consulta de mudanza realizamos una visita a domicilio en Vilafranca para tomar fotos, revisar accesos, escaleras, ascensor, volumen de muebles, objetos delicados y necesidades especiales, preparando un presupuesto de mudanzas preciso, seguro, profesional y adaptado a tu vivienda.",
           paso2Title: "Presupuesto",
-          paso2Text: "Preparamos una orientacion clara y sin compromiso.",
+          paso2Text: "Con la informacion de la visita preparamos un presupuesto detallado y sin compromiso, desglosado por volumen, distancia, embalaje y servicios adicionales, para que sepas exactamente que incluye tu mudanza y puedas decidir con confianza, sin sorpresas ni costes ocultos al final.",
           paso3Title: "Preparacion",
-          paso3Text: "Organizamos cajas, protecciones y tiempos de recogida.",
+          paso3Text: "Organizamos cajas, plastico protector, mantas y etiquetas para cada habitacion, desmontamos muebles grandes y coordinamos fechas y horarios de recogida con el equipo, dejando todo listo y protegido para que la carga sea rapida, ordenada y sin imprevistos el dia de la mudanza.",
           paso4Title: "Entrega",
-          paso4Text: "Transportamos, descargamos y colocamos segun lo acordado.",
+          paso4Text: "Transportamos tus pertenencias con cuidado, descargamos en el nuevo domicilio u oficina y colocamos cada mueble y caja en el lugar acordado, incluyendo montaje si es necesario, para que termines la mudanza con todo en su sitio y sin trabajo pendiente.",
           reseñasTag: "Reseñas",
           reseñasTitle: "Clientes que confian en Mudanzas Vilafranca",
           reseñasText: "Opiniones destacadas para mostrar confianza desde el primer vistazo.",
@@ -1761,7 +2015,7 @@
           faq3Text: "Depende de origen, destino, volumen, accesos, fecha y servicios adicionales.",
           faq4Title: "La web funciona bien en movil?",
           faq4Text: "Si, el menu se despliega y las secciones se adaptan a pantallas pequenas.",
-          footer: "2026 Mudanzas Vilafranca - Todos los derechos reservados",
+          footer: "� 2026 Mudanzas Vilafranca - Todos los derechos reservados",
           emailSubject: "Solicitud de presupuesto de mudanza",
           emailIntro: "Hola, quiero solicitar un presupuesto de mudanza.",
           emailName: "Nombre",
@@ -1809,11 +2063,11 @@
           paso1Title: "Consulta",
           paso1Text: "A la consulta de mudanca fem una visita a domicili a Vilafranca per fer fotos, revisar accessos, escales, ascensor, volum de mobles, objectes delicats i necessitats especials, preparant un pressupost de mudances precis, segur, professional i adaptat a la vivienda.",
           paso2Title: "Pressupost",
-          paso2Text: "Preparem una orientacio clara i sense compromis.",
+          paso2Text: "Amb la informacio de la visita preparem un pressupost detallat i sense compromis, desglossat per volum, distancia, embalatge i serveis addicionals, perque sapigues exactament que inclou la teva mudanca i puguis decidir amb confianca, sense sorpreses ni costos ocults al final.",
           paso3Title: "Preparacio",
-          paso3Text: "Organitzem caixes, proteccions i temps de recollida.",
+          paso3Text: "Organitzem caixes, plastic protector, mantes i etiquetes per a cada habitacio, desmuntem mobles grans i coordinem dates i horaris de recollida amb l'equip, deixant-ho tot a punt i protegit perque la carrega sigui rapida, ordenada i sense imprevistos el dia de la mudanca.",
           paso4Title: "Entrega",
-          paso4Text: "Transportem, descarreguem i col.loquem segons l'acordat.",
+          paso4Text: "Transportem les teves pertinences amb cura, descarreguem al nou domicili o oficina i col.loquem cada moble i caixa al lloc acordat, incloent muntatge si cal, perque acabis la mudanca amb tot al seu lloc i sense feina pendent.",
           reseñasTag: "Ressenyes",
           reseñasTitle: "Clients que confien en Mudanzas Vilafranca",
           reseñasText: "Opinions destacades per mostrar confianca des del primer cop d'ull.",
@@ -1865,7 +2119,7 @@
           faq3Text: "Depen d'origen, destinacio, volum, accessos, data i serveis addicionals.",
           faq4Title: "La web funciona be en mobil?",
           faq4Text: "Si, el menu es desplega i les seccions s'adapten a pantalles petites.",
-          footer: "2026 Mudanzas Vilafranca - Tots els drets reservats",
+          footer: "� 2026 Mudanzas Vilafranca - Tots els drets reservats",
           emailSubject: "Sol.licitud de pressupost de mudanca",
           emailIntro: "Hola, vull sol.licitar un pressupost de mudanca.",
           emailName: "Nom",
@@ -1913,11 +2167,11 @@
           paso1Title: "Request",
           paso1Text: "During the moving consultation, we visit your home in Vilafranca to take photos, check access, stairs, elevator, furniture volume, fragile items and special needs, preparing a precise, safe, professional moving quote adapted to your property and relocation plan today complete.",
           paso2Title: "Quote",
-          paso2Text: "We prepare a clear estimate with no obligation.",
+          paso2Text: "Using the information from the visit, we prepare a detailed, no-obligation quote broken down by volume, distance, packing and additional services, so you know exactly what your move includes and can decide with confidence, with no surprises or hidden costs at the end.",
           paso3Title: "Preparation",
-          paso3Text: "We organize boxes, protection and pickup times.",
+          paso3Text: "We organize boxes, protective wrap, blankets and labels for each room, disassemble large furniture and coordinate dates and pickup times with the team, leaving everything ready and protected so loading is fast, orderly and free of surprises on moving day.",
           paso4Title: "Delivery",
-          paso4Text: "We transport, unload and place items as agreed.",
+          paso4Text: "We transport your belongings with care, unload at the new home or office and place every piece of furniture and box where agreed, including assembly if needed, so you finish the move with everything in place and no work left to do.",
           reseñasTag: "Reviews",
           reseñasTitle: "Customers who trust Mudanzas Vilafranca",
           reseñasText: "Highlighted reviews to show trust at first glance.",
@@ -1969,7 +2223,7 @@
           faq3Text: "It depends on origin, destination, volume, access, date and extra services.",
           faq4Title: "Does the website work well on mobile?",
           faq4Text: "Yes, the menu opens and the sections adapt to small screens.",
-          footer: "2026 Mudanzas Vilafranca - All rights reserved",
+          footer: "� 2026 Mudanzas Vilafranca - All rights reserved",
           emailSubject: "Moving quote request",
           emailIntro: "Hello, I would like to request a moving quote.",
           emailName: "Name",
@@ -2146,7 +2400,7 @@
         setText("#faq .faq:nth-child(3) p", t.faq3Text);
         setText("#faq .faq:nth-child(4) summary", t.faq4Title);
         setText("#faq .faq:nth-child(4) p", t.faq4Text);
-        setText("footer", t.footer);
+        setText(".footer-legal", t.footer);
       };
 
       botonMenu.addEventListener("click", () => {
@@ -2206,3 +2460,4 @@ ${t.emailDetails}: ${mensaje}
     </script>
   </body>
 </html>
+
