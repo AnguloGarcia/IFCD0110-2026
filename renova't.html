@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RENOVA'T aluminio + pvc</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* body {
+      color: #222;
+      background: #f5f7f8;
+      line-height: 1.6;
+    /* } */
+
+    header {
+      background: #0f2f3f;
+      color: white;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #4fc3f7;
+      font-size: 18px;
+    } */
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #4fc3f7;
+    }
+
+    .hero {
+      min-height: 85vh;
+      background: linear-gradient(rgba(15,47,63,0.75), rgba(15,47,63,0.75)),
+        url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 0 8%;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 21px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #4fc3f7;
+      color: #0f2f3f;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: white;
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: #0f2f3f;
+    }
+/* 
+    .section-title p {
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card h3 {
+      color: #0f2f3f;
+      margin-bottom: 15px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      align-items: center;
+      background: white;
+    }
+
+    .about img {
+      width: 100%; */
+      border-radius: 18px;
+    }
+
+    .about h2 {
+      color: #0f2f3f;
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+
+    .features {
+      background: #0f2f3f;
+      color: white;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      text-align: center;
+    }
+
+    .feature {
+      padding: 20px;
+    }
+
+    .feature h3 {
+      color: #4fc3f7;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .contact {
+      background: white;
+    }
+
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+      background: #f5f7f8;
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .contact-box input,
+    .contact-box textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .contact-box button {
+      width: 100%;
+      border: none;
+      background: #0f2f3f;
+      color: white;
+      padding: 15px;
+      font-size: 17px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .contact-box button:hover {
+      background: #4fc3f7;
+      color: #0f2f3f;
+    }
+
+    footer {
+      background: #0b202b;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #25d366;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      nav {
+        margin-top: 15px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- <header>
+    <div class="logo">RENOVA'T <span>aluminio + pvc</span></div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header> -->
+
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <h1>Carpintería de aluminio, PVC y cristalería</h1>
+      <p>
+        Instalación de ventanas, cerramientos, reformas y trabajos a medida
+        con acabados profesionales y materiales de calidad.
+      </p>
+      <a href="#contacto" class="btn">Solicitar presupuesto</a>
+    </div>
+  </section>
+
+  <section id="servicios">
+    <div class="section-title">
+      <h2>Nuestros servicios</h2>
+      <p>Soluciones profesionales para viviendas, locales y comunidades.</p>
+    </div>
+
+    <div class="services">
+      <div class="card">
+        <h3>Ventanas de aluminio</h3>
+        <p>Fabricación e instalación de ventanas resistentes, modernas y eficientes.</p>
+      </div>
+
+      <div class="card">
+        <h3>Ventanas PVC</h3>
+        <p>Máximo aislamiento térmico y acústico para mejorar el confort del hogar.</p>
+      </div>
+
+      <div class="card">
+        <h3>Cerramientos</h3>
+        <p>Cerramientos de terrazas, balcones, patios y locales comerciales.</p>
+      </div>
+
+      <div class="card">
+        <h3>Cristalería</h3>
+        <p>Instalación de cristales, mamparas, vidrios de seguridad y soluciones a medida.</p>
+      </div>
+
+      <div class="card">
+        <h3>Reformas</h3>
+        <p>Trabajos de reforma y renovación para mejorar tus espacios.</p>
+      </div>
+
+      <div class="card">
+        <h3>Carpintería a medida</h3>
+        <p>Puertas, persianas, barandillas y estructuras personalizadas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="nosotros">
+    <div>
+      <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80" alt="Trabajos de aluminio y ventanas">
+    </div>
+
+    <div>
+      <h2>Sobre RENOVA'T</h2>
+      <p>
+        En <strong>RENOVA'T aluminio + pvc</strong> nos especializamos en soluciones de
+        carpintería de aluminio, PVC, cristalería y reformas. Trabajamos con precisión,
+        compromiso y materiales de calidad para ofrecer resultados duraderos y estéticos.
+      </p>
+      <br>
+      <p>
+        Nuestro objetivo es renovar tus espacios, mejorar el aislamiento de tu vivienda
+        y ofrecerte un servicio cercano, serio y profesional.
+      </p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="section-title">
+      <h2 style="color:white;">¿Por qué elegirnos?</h2>
+      <p style="color:#d7eaf2;">Calidad, confianza y experiencia en cada proyecto.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature">
+        <h3>✓ Calidad</h3>
+        <p>Materiales resistentes y acabados profesionales.</p>
+      </div>
+
+      <div class="feature">
+        <h3>✓ Presupuesto</h3>
+        <p>Asesoramiento personalizado y presupuesto sin compromiso.</p>
+      </div>
+
+      <div class="feature">
+        <h3>✓ Instalación</h3>
+        <p>Montaje rápido, limpio y seguro.</p>
+      </div>
+
+      <div class="feature">
+        <h3>✓ A medida</h3>
+        <p>Soluciones adaptadas a cada espacio y necesidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="trabajos">
+    <div class="section-title">
+      <h2>Trabajos realizados</h2>
+      <p>Algunos ejemplos de instalaciones y reformas.</p>
+    </div>
+
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Ventanas modernas">
+      <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80" alt="Cerramiento">
+      <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=800&q=80" alt="Reforma vivienda">
+      <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=800&q=80" alt="Cristalería">
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <div class="section-title">
+      <h2>Contacta con nosotros</h2>
+      <p>Pide tu presupuesto sin compromiso.</p>
+    </div>
+
+    <div class="contact-box">
+      <form>
+        <input type="text" placeholder="Nombre" required>
+        <input type="tel" placeholder="Teléfono" required>
+        <input type="email" placeholder="Correo electrónico">
+        <textarea rows="5" placeholder="Cuéntanos qué necesitas"></textarea>
+        <button type="submit">Enviar solicitud</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>RENOVA'T aluminio + pvc</strong></p>
+    <p>Carpintería de aluminio · PVC · Cristalería · Cerramientos · Reformas</p>
+    <p>© 2026 Todos los derechos reservados</p>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/34600000000" target="_blank">
+    WhatsApp
+  </a>
+
+</body>
+</html>
