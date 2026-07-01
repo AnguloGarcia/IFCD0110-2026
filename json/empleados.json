@@ -1,0 +1,8 @@
+{
+  "empleados": [
+    { "nom": "Maria", "cognoms": "Garcia", "departament": "IT" },
+    { "nom": "Pau", "cognoms": "Martínez", "departament": "Vendes" },
+    { "nom": "Laura", "cognoms": "López", "departament": "RRHH" },
+    { "nom": "Carles", "cognoms": "Puig", "departament": "Comptabilitat" }
+  ]
+}

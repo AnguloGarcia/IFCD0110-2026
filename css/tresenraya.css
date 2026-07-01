@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background: #f2efe7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.juego {
+  width: min(92vw, 520px);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 18px;
+  font-size: 2.5rem;
+  color: #183153;
+}
+
+.panel {
+  padding: 24px;
+  background: #ffffff;
+  border: 3px solid #183153;
+  border-radius: 8px;
+  box-shadow: 8px 8px 0 #f2b705;
+}
+
+.mensaje {
+  min-height: 32px;
+  margin-bottom: 18px;
+  font-size: 1.35rem;
+  font-weight: bold;
+}
+
+.tablero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.casilla {
+  aspect-ratio: 1;
+  border: 3px solid #183153;
+  border-radius: 6px;
+  background: #dff3ff;
+  color: #183153;
+  font-size: clamp(3rem, 14vw, 5rem);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.casilla:hover {
+  background: #bde8ff;
+  transform: translateY(-2px);
+}
+
+.casilla:disabled {
+  cursor: not-allowed;
+  transform: none;
+}
+
+.casilla.ganadora {
+  background: #8fe388;
+}
+
+.reiniciar {
+  width: 100%;
+  padding: 14px;
+  border: 0;
+  border-radius: 6px;
+  background: #183153;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.reiniciar:hover {
+  background: #254b7c;
+}
+
+@media (max-width: 420px) {
+  .panel {
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}

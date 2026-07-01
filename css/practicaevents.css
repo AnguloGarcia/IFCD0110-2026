@@ -1,0 +1,125 @@
+  header p {
+                text-align: center;
+                color: gray;
+                font-size: 18px;
+            }
+            aside {
+                padding: 20px;
+            }
+            aside ul {
+                list-style: none;
+                padding: 0;
+            }
+            aside li {
+                margin-bottom: 10px;
+            }
+            aside a {
+                text-decoration-style: none;
+                color: black;
+                font-weight: bold;
+                display: block;
+                padding: 10px;
+                background-color: white;
+                border-radius: 5px;
+            }
+            main img {
+                width: 100%;
+                max-width: 600px;
+                display: block;
+                margin: 0 auto;
+            }
+            header, footer¨{
+                text-align: center;
+                background-color: blue;
+                color: rgb(232, 240, 234);
+            }
+            .contenedor{
+                display: grid;
+                grid-template-areas: 
+                "cabecera cabecera cabecera cabecera cabecera cabecera cabecera cabecera "
+                "lateral  centro centro centro centro centro centro centro "
+                "lateral  centro centro centro centro centro centro centro "
+                "lateral  centro centro centro centro centro centro centro "
+                "lateral  centro centro centro centro centro centro centro "
+                "pie pie pie pie pie pie pie pie";
+                grid-template-columns: 1fr 1fr 1fr  1fr 1fr 1fr 1r 1fr;
+                grid-template-rows : 1fr 1fr 1fr 1fr 1fr 1fr
+            }
+            main{
+                grid-area: centro;
+                background-color: aqua;
+                
+            }
+            header{
+                grid-area: cabecera;
+                background-color: blueviolet;
+            }
+            aside{
+                grid-area: lateral;
+                background-color: aquamarine;
+            }
+            footer{
+                grid-area: pie;
+                background-color: bisque;
+            }
+            .instrucciones {
+                text-align: center;
+                margin: 10px;
+                font-size: 14px;
+            }
+            .contador {
+                text-align: center;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            .zona-eventos {
+                position: relative;
+                overflow: hidden;
+                min-height: 350px;
+                margin: 10px;
+                border: 2px dashed #555;
+                border-radius: 8px;
+                cursor: crosshair;
+                transition: background-color 0.2s ease;
+            }
+            .objeto {
+                position: absolute;
+                transform: translate(-50%, -50%);
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-weight: bold;
+                font-size: 12px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            }
+            .objeto-click {
+                border-radius: 8px;
+            }
+            .objeto-especial {
+                border: 3px solid gold;
+            }
+            .zona-oscura {
+                background-color: #1b1b1f !important;
+                border-color: #f1f1f1;
+            }
+            .btn-borrar {
+                position: absolute;
+                top: -8px;
+                right: -8px;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                border: none;
+                background-color: #d62828;
+                color: white;
+                font-size: 11px;
+                line-height: 1;
+                cursor: pointer;
+                padding: 0;
+            }
+            
+         

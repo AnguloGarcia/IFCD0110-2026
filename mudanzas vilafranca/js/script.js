@@ -74,17 +74,34 @@
           lista1: "Atencion en Vilafranca y alrededores",
           lista2: "Traslados locales y nacionales",
           lista3: "Opciones con embalaje, desmontaje y montaje",
-          labelNombre: "Nombre",
+          labelNombre: "Nombre completo",
           placeholderNombre: "Tu nombre",
           labelTelefono: "Telefono",
-          labelServicio: "Tipo de servicio",
-          opcion1: "Mudanza de hogar",
-          opcion2: "Mudanza de oficina",
-          opcion3: "Embalaje y transporte",
-          opcion4: "Guardamuebles",
-          labelMensaje: "Detalles",
-          placeholderMensaje: "Origen, destino, fecha y volumen aproximado",
+          labelEmail: "Email",
+          labelCiudadOrigen: "Ciudad de recogida",
+          labelCiudadDestino: "Ciudad de entrega",
+          labelDireccionOrigen: "Direccion de recogida",
+          labelDireccionDestino: "Direccion de entrega",
+          labelPisoOrigen: "Piso de recogida",
+          labelAscensorOrigen: "Ascensor en recogida",
+          labelPisoDestino: "Piso de entrega",
+          labelAscensorDestino: "Ascensor en entrega",
+          labelFechaMudanza: "Fecha aproximada de la mudanza",
+          labelHabitaciones: "Numero de habitaciones",
+          labelMueblesGrandes: "Muebles grandes",
+          labelNumCajas: "Numero aproximado de cajas",
+          labelEmbalaje: "Necesita embalaje?",
+          labelDesmontaje: "Necesita desmontaje y montaje?",
+          labelFotos: "Fotos o videos de la mudanza",
+          labelMensaje: "Observaciones",
+          placeholderMensaje: "Cualquier detalle adicional sobre la mudanza",
+          opcionSeleccione: "Selecciona",
+          opcionSi: "Sí",
+          opcionNo: "No",
           submit: "Solicitar presupuesto",
+          enviando: "Enviando...",
+          envioExito: "Gracias! Hemos recibido tu solicitud, te contactaremos pronto.",
+          envioError: "No se ha podido enviar. Prueba de nuevo o contactanos por WhatsApp.",
           contactoTag: "Contacto",
           contactoTitle: "Datos directos del negocio",
           contactoText: "Informacion clara para contactar sin tener que buscar.",
@@ -104,13 +121,7 @@
           faq3Text: "Depende de origen, destino, volumen, accesos, fecha y servicios adicionales.",
           faq4Title: "La web funciona bien en movil?",
           faq4Text: "Si, el menu se despliega y las secciones se adaptan a pantallas pequenas.",
-          footer: "2026 Mudanzas Vilafranca - Todos los derechos reservados",
-          emailSubject: "Solicitud de presupuesto de mudanza",
-          emailIntro: "Hola, quiero solicitar un presupuesto de mudanza.",
-          emailName: "Nombre",
-          emailPhone: "Telefono",
-          emailService: "Servicio",
-          emailDetails: "Detalles"
+          footer: "2026 Mudanzas Vilafranca - Todos los derechos reservados"
         },
         ca: {
           idiomaLabel: "Idioma",
@@ -178,17 +189,34 @@
           lista1: "Atencio a Vilafranca i voltants",
           lista2: "Trasllats locals i nacionals",
           lista3: "Opcions amb embalatge, desmuntatge i muntatge",
-          labelNombre: "Nom",
+          labelNombre: "Nom complet",
           placeholderNombre: "El teu nom",
           labelTelefono: "Telefon",
-          labelServicio: "Tipus de servei",
-          opcion1: "Mudanca de llar",
-          opcion2: "Mudanca d'oficina",
-          opcion3: "Embalatge i transport",
-          opcion4: "Guardamobles",
-          labelMensaje: "Detalls",
-          placeholderMensaje: "Origen, destinacio, data i volum aproximat",
+          labelEmail: "Email",
+          labelCiudadOrigen: "Ciutat de recollida",
+          labelCiudadDestino: "Ciutat d'entrega",
+          labelDireccionOrigen: "Adreca de recollida",
+          labelDireccionDestino: "Adreca d'entrega",
+          labelPisoOrigen: "Pis de recollida",
+          labelAscensorOrigen: "Ascensor a la recollida",
+          labelPisoDestino: "Pis d'entrega",
+          labelAscensorDestino: "Ascensor a l'entrega",
+          labelFechaMudanza: "Data aproximada de la mudanca",
+          labelHabitaciones: "Nombre d'habitacions",
+          labelMueblesGrandes: "Mobles grans",
+          labelNumCajas: "Nombre aproximat de caixes",
+          labelEmbalaje: "Necessita embalatge?",
+          labelDesmontaje: "Necessita desmuntatge i muntatge?",
+          labelFotos: "Fotos o videos de la mudanca",
+          labelMensaje: "Observacions",
+          placeholderMensaje: "Qualsevol detall addicional sobre la mudanca",
+          opcionSeleccione: "Selecciona",
+          opcionSi: "Sí",
+          opcionNo: "No",
           submit: "Sol.licitar pressupost",
+          enviando: "Enviant...",
+          envioExito: "Gracies! Hem rebut la teva sol.licitud, et contactarem aviat.",
+          envioError: "No s'ha pogut enviar. Torna-ho a provar o contacta'ns per WhatsApp.",
           contactoTag: "Contacte",
           contactoTitle: "Dades directes del negoci",
           contactoText: "Informacio clara per contactar sense haver de buscar.",
@@ -208,13 +236,7 @@
           faq3Text: "Depen d'origen, destinacio, volum, accessos, data i serveis addicionals.",
           faq4Title: "La web funciona be en mobil?",
           faq4Text: "Si, el menu es desplega i les seccions s'adapten a pantalles petites.",
-          footer: "2026 Mudanzas Vilafranca - Tots els drets reservats",
-          emailSubject: "Sol.licitud de pressupost de mudanca",
-          emailIntro: "Hola, vull sol.licitar un pressupost de mudanca.",
-          emailName: "Nom",
-          emailPhone: "Telefon",
-          emailService: "Servei",
-          emailDetails: "Detalls"
+          footer: "2026 Mudanzas Vilafranca - Tots els drets reservats"
         },
         en: {
           idiomaLabel: "Language",
@@ -282,17 +304,34 @@
           lista1: "Service in Vilafranca and nearby areas",
           lista2: "Local and national moves",
           lista3: "Options with packing, disassembly and assembly",
-          labelNombre: "Name",
+          labelNombre: "Full name",
           placeholderNombre: "Your name",
           labelTelefono: "Phone",
-          labelServicio: "Service type",
-          opcion1: "Home move",
-          opcion2: "Office move",
-          opcion3: "Packing and transport",
-          opcion4: "Storage",
-          labelMensaje: "Details",
-          placeholderMensaje: "Origin, destination, date and approximate volume",
+          labelEmail: "Email",
+          labelCiudadOrigen: "Pickup city",
+          labelCiudadDestino: "Delivery city",
+          labelDireccionOrigen: "Pickup address",
+          labelDireccionDestino: "Delivery address",
+          labelPisoOrigen: "Pickup floor",
+          labelAscensorOrigen: "Elevator at pickup",
+          labelPisoDestino: "Delivery floor",
+          labelAscensorDestino: "Elevator at delivery",
+          labelFechaMudanza: "Approximate moving date",
+          labelHabitaciones: "Number of rooms",
+          labelMueblesGrandes: "Large furniture",
+          labelNumCajas: "Approximate number of boxes",
+          labelEmbalaje: "Do you need packing?",
+          labelDesmontaje: "Do you need disassembly and assembly?",
+          labelFotos: "Photos or videos of the move",
+          labelMensaje: "Comments",
+          placeholderMensaje: "Any additional detail about the move",
+          opcionSeleccione: "Select",
+          opcionSi: "Yes",
+          opcionNo: "No",
           submit: "Request quote",
+          enviando: "Sending...",
+          envioExito: "Thanks! We received your request, we'll contact you soon.",
+          envioError: "Could not send. Please try again or contact us on WhatsApp.",
           contactoTag: "Contact",
           contactoTitle: "Direct business details",
           contactoText: "Clear information to get in touch without searching.",
@@ -312,13 +351,7 @@
           faq3Text: "It depends on origin, destination, volume, access, date and extra services.",
           faq4Title: "Does the website work well on mobile?",
           faq4Text: "Yes, the menu opens and the sections adapt to small screens.",
-          footer: "2026 Mudanzas Vilafranca - All rights reserved",
-          emailSubject: "Moving quote request",
-          emailIntro: "Hello, I would like to request a moving quote.",
-          emailName: "Name",
-          emailPhone: "Phone",
-          emailService: "Service",
-          emailDetails: "Details"
+          footer: "2026 Mudanzas Vilafranca - All rights reserved"
         }
       };
 
@@ -460,13 +493,29 @@
         setText('label[for="nombre"]', t.labelNombre);
         setPlaceholder("#nombre", t.placeholderNombre);
         setText('label[for="telefono"]', t.labelTelefono);
-        setText('label[for="servicio"]', t.labelServicio);
-        setText("#servicio option:nth-child(1)", t.opcion1);
-        setText("#servicio option:nth-child(2)", t.opcion2);
-        setText("#servicio option:nth-child(3)", t.opcion3);
-        setText("#servicio option:nth-child(4)", t.opcion4);
+        setText('label[for="email"]', t.labelEmail);
+        setText('label[for="ciudad-origen"]', t.labelCiudadOrigen);
+        setText('label[for="ciudad-destino"]', t.labelCiudadDestino);
+        setText('label[for="direccion-origen"]', t.labelDireccionOrigen);
+        setText('label[for="direccion-destino"]', t.labelDireccionDestino);
+        setText('label[for="piso-origen"]', t.labelPisoOrigen);
+        setText('label[for="ascensor-origen"]', t.labelAscensorOrigen);
+        setText('label[for="piso-destino"]', t.labelPisoDestino);
+        setText('label[for="ascensor-destino"]', t.labelAscensorDestino);
+        setText('label[for="fecha-mudanza"]', t.labelFechaMudanza);
+        setText('label[for="habitaciones"]', t.labelHabitaciones);
+        setText('label[for="muebles-grandes"]', t.labelMueblesGrandes);
+        setText('label[for="num-cajas"]', t.labelNumCajas);
+        setText('label[for="embalaje"]', t.labelEmbalaje);
+        setText('label[for="desmontaje"]', t.labelDesmontaje);
+        setText('label[for="fotos"]', t.labelFotos);
         setText('label[for="mensaje"]', t.labelMensaje);
         setPlaceholder("#mensaje", t.placeholderMensaje);
+        document.querySelectorAll("#ascensor-origen, #ascensor-destino, #embalaje, #desmontaje").forEach((select) => {
+          setText(`#${select.id} option[value=""]`, t.opcionSeleccione);
+          setText(`#${select.id} option[value="Sí"]`, t.opcionSi);
+          setText(`#${select.id} option[value="No"]`, t.opcionNo);
+        });
         setText("#formulario-presupuesto .boton", t.submit);
 
         setText("#contacto .etiqueta", t.contactoTag);
@@ -522,27 +571,48 @@
         });
       }
 
+      const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbxiPIai-VZdT9hu4qI-mNclvV3-7AYAK-LRRPe-Zn6UfG6BemCDnVaBleksik6-eyCb/exec";
+      const mensajeFormulario = document.querySelector("#formulario-mensaje");
+
+      const mostrarMensajeFormulario = (texto, tipo) => {
+        if (!mensajeFormulario) {
+          return;
+        }
+        mensajeFormulario.textContent = texto;
+        mensajeFormulario.classList.remove("exito", "error");
+        mensajeFormulario.classList.add("visible", tipo);
+      };
+
       if (formularioPresupuesto) {
         formularioPresupuesto.addEventListener("submit", (evento) => {
           evento.preventDefault();
 
           const t = textos[idiomaActual];
-          const nombre = document.querySelector("#nombre").value;
-          const telefono = document.querySelector("#telefono").value;
-          const servicio = document.querySelector("#servicio").value;
-          const mensaje = document.querySelector("#mensaje").value;
-          const asunto = t.emailSubject;
-          const cuerpo = `
-${t.emailIntro}
+          const boton = formularioPresupuesto.querySelector(".boton");
+          const textoBotonOriginal = boton.textContent;
+          boton.disabled = true;
+          boton.textContent = t.enviando;
 
-${t.emailName}: ${nombre}
-${t.emailPhone}: ${telefono}
-${t.emailService}: ${servicio}
-${t.emailDetails}: ${mensaje}
-        `.trim();
-
-          const urlGmail = `https://mail.google.com/mail/?view=cm&fs=1&to=lagentesi@gmail.com&su=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
-          window.open(urlGmail, "_blank");
+          fetch(URL_APPS_SCRIPT, {
+            method: "POST",
+            body: new FormData(formularioPresupuesto)
+          })
+            .then((respuesta) => respuesta.json())
+            .then((datos) => {
+              if (!datos.ok) {
+                throw new Error(datos.error || "error desconocido");
+              }
+              mostrarMensajeFormulario(t.envioExito, "exito");
+              formularioPresupuesto.reset();
+            })
+            .catch((error) => {
+              console.error("Error al enviar el formulario de presupuesto:", error);
+              mostrarMensajeFormulario(t.envioError, "error");
+            })
+            .finally(() => {
+              boton.disabled = false;
+              boton.textContent = textoBotonOriginal;
+            });
         });
       }
 

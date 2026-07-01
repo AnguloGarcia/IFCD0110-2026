@@ -921,6 +921,34 @@
         width: 100%;
       }
 
+      .fila-doble {
+        display: grid;
+        gap: 0 16px;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .formulario-mensaje {
+        border-radius: 14px;
+        display: none;
+        font-weight: 700;
+        margin-bottom: 16px;
+        padding: 12px 14px;
+      }
+
+      .formulario-mensaje.visible {
+        display: block;
+      }
+
+      .formulario-mensaje.exito {
+        background: #e3f3e6;
+        color: #1f6d33;
+      }
+
+      .formulario-mensaje.error {
+        background: #fbe5e1;
+        color: #9c2c1c;
+      }
+
       .grid-contacto {
         grid-template-columns: repeat(3, 1fr);
       }
@@ -1088,6 +1116,10 @@
         .hero,
         .proceso-grid,
         .presupuesto {
+          grid-template-columns: 1fr;
+        }
+
+        .fila-doble {
           grid-template-columns: 1fr;
         }
 

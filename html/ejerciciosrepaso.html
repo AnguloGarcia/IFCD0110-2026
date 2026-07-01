@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title id="titulo">Eventos JavaScript</title>
+
+    <style>
+        #caja {
+            width: 250px;
+            height: 150px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 150px;
+            font-size: 20px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- camibar titulo de bom a dom  -->
+
+    <button id="boton">Cambiar título</button>
+
+    <script>
+        let titulo = document.getElementById("titulo");
+        let boton = document.getElementById("boton");
+
+        boton.addEventListener("click", function() {
+            if (titulo.textContent === "DOM") {
+                titulo.textContent = "BOM";
+            } else {
+                titulo.textContent = "DOM";
+            }
+        });
+    </script>
+
+    <!-- eventos de js al pasar el raton y pulsar cualquier letras -->
+
+    <h1>Eventos en JavaScript</h1>
+
+    <div id="caja">
+        Pasa o haz click
+    </div>
+
+    <p id="mensaje">Aquí aparecerá el evento</p>
+
+    <br>
+
+<!-- formulario de prueba -->
+
+    <h1>Formulario</h1>
+    <form>
+        <label>Nombre:</label>
+        <input type="text" id="nombre">
+
+        <br><br>
+
+        <label>Apellido:</label>
+        <input type="text" id="apellido">
+
+        <br><br>
+
+        <button type="submit" id="boton" disabled>Enviar</button>
+    </form>
+
+<!-- elementos asociados al formulario  -->
+
+    <script>
+        // Guardamos los elementos en variables
+        let nombre = document.getElementById("nombre");
+        let apellido = document.getElementById("apellido");
+        let boton = document.getElementById("boton");
+
+        // Creamos una función para comprobar los campos
+        function comprobarFormulario() {
+            if (nombre.value !== "" && apellido.value !== "") {
+                boton.disabled = false;
+            } else {
+                boton.disabled = true;
+            }
+        }
+
+        //  Cada vez que escribimos, se comprueba el formulario
+        nombre.addEventListener("input", comprobarFormulario);
+        apellido.addEventListener("input", comprobarFormulario);
+    </script>
+    <script>
+
+
+        let caja = document.getElementById("caja");
+        let mensaje = document.getElementById("mensaje");
+
+        caja.addEventListener("click", function() {
+            mensaje.textContent = "Has hecho CLICK";
+            caja.style.backgroundColor = "yellow";
+        });
+
+        caja.addEventListener("mouseover", function() {
+            mensaje.textContent = "Has pasado el ratón por encima";
+            caja.style.backgroundColor = "lightgreen";
+        });
+
+        caja.addEventListener("mouseout", function() {
+            mensaje.textContent = "Has quitado el ratón de encima";
+            caja.style.backgroundColor = "lightblue";
+        });
+
+        caja.addEventListener("dblclick", function() {
+            mensaje.textContent = "Has hecho DOBLE CLICK";
+            caja.style.backgroundColor = "orange";
+        });
+
+        document.addEventListener("keydown", function(evento) {
+            mensaje.textContent = "Has pulsado la tecla: " + evento.key;
+        });
+
+        alert("has hecho click en la caja");
+
+        caja.addEventListener("click", function() {
+        alert("has hecho click");
+        });
+    </script>
+
+</body>
+</html>

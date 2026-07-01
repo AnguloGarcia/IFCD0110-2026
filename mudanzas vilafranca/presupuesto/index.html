@@ -168,22 +168,125 @@
           </div>
 
           <form class="formulario" id="formulario-presupuesto">
-            <label for="nombre">Nombre</label>
+            <p class="formulario-mensaje" id="formulario-mensaje" role="status"></p>
+
+            <label for="nombre">Nombre completo</label>
             <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
 
-            <label for="telefono">Telefono</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="657560728" required />
+            <div class="fila-doble">
+              <div>
+                <label for="telefono">Telefono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="657560728" required />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required />
+              </div>
+            </div>
 
-            <label for="servicio">Tipo de servicio</label>
-            <select id="servicio" name="servicio">
-              <option>Mudanza de hogar</option>
-              <option>Mudanza de oficina</option>
-              <option>Embalaje y transporte</option>
-              <option>Guardamuebles</option>
-            </select>
+            <div class="fila-doble">
+              <div>
+                <label for="ciudad-origen">Ciudad de recogida</label>
+                <input type="text" id="ciudad-origen" name="ciudadOrigen" placeholder="Vilafranca del Penedes" required />
+              </div>
+              <div>
+                <label for="ciudad-destino">Ciudad de entrega</label>
+                <input type="text" id="ciudad-destino" name="ciudadDestino" placeholder="Ciudad de destino" required />
+              </div>
+            </div>
 
-            <label for="mensaje">Detalles</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Origen, destino, fecha y volumen aproximado"></textarea>
+            <div class="fila-doble">
+              <div>
+                <label for="direccion-origen">Direccion de recogida</label>
+                <input type="text" id="direccion-origen" name="direccionOrigen" placeholder="Calle y numero" />
+              </div>
+              <div>
+                <label for="direccion-destino">Direccion de entrega</label>
+                <input type="text" id="direccion-destino" name="direccionDestino" placeholder="Calle y numero" />
+              </div>
+            </div>
+
+            <div class="fila-doble">
+              <div>
+                <label for="piso-origen">Piso de recogida</label>
+                <input type="text" id="piso-origen" name="pisoOrigen" placeholder="Ej: 3, bajo, atico" />
+              </div>
+              <div>
+                <label for="ascensor-origen">Ascensor en recogida</label>
+                <select id="ascensor-origen" name="ascensorOrigen">
+                  <option value="">Selecciona</option>
+                  <option value="Sí">Sí</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="fila-doble">
+              <div>
+                <label for="piso-destino">Piso de entrega</label>
+                <input type="text" id="piso-destino" name="pisoDestino" placeholder="Ej: 3, bajo, atico" />
+              </div>
+              <div>
+                <label for="ascensor-destino">Ascensor en entrega</label>
+                <select id="ascensor-destino" name="ascensorDestino">
+                  <option value="">Selecciona</option>
+                  <option value="Sí">Sí</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="fila-doble">
+              <div>
+                <label for="fecha-mudanza">Fecha aproximada de la mudanza</label>
+                <input type="date" id="fecha-mudanza" name="fechaMudanza" />
+              </div>
+              <div>
+                <label for="habitaciones">Numero de habitaciones</label>
+                <input type="number" id="habitaciones" name="habitaciones" min="0" placeholder="Ej: 3" />
+              </div>
+            </div>
+
+            <div class="fila-doble">
+              <div>
+                <label for="muebles-grandes">Muebles grandes</label>
+                <input type="text" id="muebles-grandes" name="mueblesGrandes" placeholder="Ej: armario, sofa, piano" />
+              </div>
+              <div>
+                <label for="num-cajas">Numero aproximado de cajas</label>
+                <input type="number" id="num-cajas" name="numCajas" min="0" placeholder="Ej: 30" />
+              </div>
+            </div>
+
+            <div class="fila-doble">
+              <div>
+                <label for="embalaje">Necesita embalaje?</label>
+                <select id="embalaje" name="embalaje">
+                  <option value="">Selecciona</option>
+                  <option value="Sí">Sí</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+              <div>
+                <label for="desmontaje">Necesita desmontaje y montaje?</label>
+                <select id="desmontaje" name="desmontaje">
+                  <option value="">Selecciona</option>
+                  <option value="Sí">Sí</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+            </div>
+
+            <label for="fotos">Fotos o videos de la mudanza</label>
+            <input
+              type="text"
+              id="fotos"
+              name="fotos"
+              placeholder="Enlace a fotos/videos (Drive, WeTransfer...) o indica que las envias por WhatsApp"
+            />
+
+            <label for="mensaje">Observaciones</label>
+            <textarea id="mensaje" name="observaciones" placeholder="Cualquier detalle adicional sobre la mudanza"></textarea>
 
             <button class="boton" type="submit">Solicitar presupuesto</button>
           </form>

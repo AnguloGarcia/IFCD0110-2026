@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="../images/caballoblanco.png">
+    <link rel="stylesheet" href="../css/funcionflecha.css">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  -->
+    <title>Ejercion funciones flecha </title>
+  </head>
+  <body>
+    <header>ejercicios funciones flecha</header>
+
+    <main>
+        el resultado de la suma de los 2 numero es :
+        <div id="numero1"> numero 1</div>
+        <div id="numero2"> numero 2</div>
+        <div id="resultado"> resultado:</div>
+        <button id="generar">Generar numeros</button>
+         <div id="numero3"> numero 3</div>
+        <div id="numero4"> numero 4</div>
+        <div id="resultado"> resultado:</div>
+        <button id="generar">Generar numeros</button>
+
+
+
+<script>
+    const numeroAleatorio = () => Math.floor(Math.random() * 100) + 1;
+    const sumar = (numero1, numero2) => numero1 + numero2;
+
+    const mostrarResultado = () => {
+        const numero1 = numeroAleatorio();
+        const numero2 = numeroAleatorio();
+        const resultado = sumar(numero1, numero2);
+
+        document.getElementById("numero1").innerText = numero1;
+        document.getElementById("numero2").innerText = numero2;
+        document.getElementById("resultado").innerText = resultado;
+       };
+
+    document.getElementById("generar").addEventListener("click", mostrarResultado);
+
+
+    const numeroAleatorio = () => Math.floor(Math.random() * 100) + 1;
+    const restar = (numero3, numero4) => numero3 + numero4;
+
+    const mostrarResultado = () => {
+        const numero3 = numeroAleatorio();
+        const numero4 = numeroAleatorio();
+        const resultado = sumar(numero3, numero4);
+
+        document.getElementById("numero3").innerText = numero1;
+        document.getElementById("numero4").innerText = numero2;
+        document.getElementById("resultado").innerText = resultado;
+       };
+
+    document.getElementById("generar").addEventListener("click", mostrarResultado);
+</script>
+
+    </main>
+    <nav></nav>
+    <footer>hecho por jose luis </footer>
+  </body>
+</html>
