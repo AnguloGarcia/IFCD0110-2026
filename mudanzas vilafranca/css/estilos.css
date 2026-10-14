@@ -717,6 +717,55 @@
         width: 30px;
       }
 
+      /* Blog: cuerpo de un artículo */
+
+      .contenido-articulo {
+        margin: 0 auto;
+        max-width: 760px;
+      }
+
+      .contenido-articulo h3 {
+        color: #0b1f3a;
+        font-size: 22px;
+        margin: 32px 0 12px;
+      }
+
+      .contenido-articulo p,
+      .contenido-articulo li {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      .contenido-articulo p {
+        margin: 0 0 14px;
+      }
+
+      .contenido-articulo ul {
+        margin: 0 0 14px;
+        padding-left: 22px;
+      }
+
+      .fecha-articulo {
+        color: #8a94a6;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        margin: 0 0 6px;
+        text-transform: uppercase;
+      }
+
+      .cta-articulo {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        margin-top: 40px;
+      }
+
+      .cta-articulo .boton {
+        width: auto;
+      }
+
       .proceso-grid {
         display: grid;
         gap: 18px;
